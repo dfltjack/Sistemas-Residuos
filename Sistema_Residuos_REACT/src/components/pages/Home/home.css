@@ -1,0 +1,45 @@
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.card-fixed-height {
+    height: auto; /* Defina a altura desejada */
+    max-height: 100vh;
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-container{
+    position: fixed;
+    bottom: 0;
+    left: 0;    
+    height: auto;    
+    width: 220vh;
+    max-width: 220;
+    display: flex;
+    flex-direction: row;
+    background-color: gray;     
+}
+
+.copyright{
+    position: fixed;
+    bottom: 0;
+    left: 150vh;    
+    height: auto;    
+    width: 100vh;
+    max-width: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-color: gray;     
+}
+
+.text{
+    text-align: justify;
+    font-size: large;
+}

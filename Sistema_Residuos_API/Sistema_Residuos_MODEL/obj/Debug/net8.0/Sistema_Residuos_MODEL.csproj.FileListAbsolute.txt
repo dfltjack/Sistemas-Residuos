@@ -1,0 +1,14 @@
+D:\Users\bejac\Desktop\Projetos\Servidor Residuos\Sistema_Residuos_API\Sistema_Residuos_MODEL\bin\Debug\net8.0\Sistema_Residuos_MODEL.deps.json
+D:\Users\bejac\Desktop\Projetos\Servidor Residuos\Sistema_Residuos_API\Sistema_Residuos_MODEL\bin\Debug\net8.0\Sistema_Residuos_MODEL.runtimeconfig.json
+D:\Users\bejac\Desktop\Projetos\Servidor Residuos\Sistema_Residuos_API\Sistema_Residuos_MODEL\bin\Debug\net8.0\Sistema_Residuos_MODEL.dll
+D:\Users\bejac\Desktop\Projetos\Servidor Residuos\Sistema_Residuos_API\Sistema_Residuos_MODEL\bin\Debug\net8.0\Sistema_Residuos_MODEL.pdb
+D:\Users\bejac\Desktop\Projetos\Servidor Residuos\Sistema_Residuos_API\Sistema_Residuos_MODEL\obj\Debug\net8.0\Sistema_Residuos_MODEL.csproj.AssemblyReference.cache
+D:\Users\bejac\Desktop\Projetos\Servidor Residuos\Sistema_Residuos_API\Sistema_Residuos_MODEL\obj\Debug\net8.0\Sistema_Residuos_MODEL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\bejac\Desktop\Projetos\Servidor Residuos\Sistema_Residuos_API\Sistema_Residuos_MODEL\obj\Debug\net8.0\Sistema_Residuos_MODEL.AssemblyInfoInputs.cache
+D:\Users\bejac\Desktop\Projetos\Servidor Residuos\Sistema_Residuos_API\Sistema_Residuos_MODEL\obj\Debug\net8.0\Sistema_Residuos_MODEL.AssemblyInfo.cs
+D:\Users\bejac\Desktop\Projetos\Servidor Residuos\Sistema_Residuos_API\Sistema_Residuos_MODEL\obj\Debug\net8.0\Sistema_Residuos_MODEL.csproj.CoreCompileInputs.cache
+D:\Users\bejac\Desktop\Projetos\Servidor Residuos\Sistema_Residuos_API\Sistema_Residuos_MODEL\obj\Debug\net8.0\Sistema_Residuos_MODEL.dll
+D:\Users\bejac\Desktop\Projetos\Servidor Residuos\Sistema_Residuos_API\Sistema_Residuos_MODEL\obj\Debug\net8.0\refint\Sistema_Residuos_MODEL.dll
+D:\Users\bejac\Desktop\Projetos\Servidor Residuos\Sistema_Residuos_API\Sistema_Residuos_MODEL\obj\Debug\net8.0\Sistema_Residuos_MODEL.pdb
+D:\Users\bejac\Desktop\Projetos\Servidor Residuos\Sistema_Residuos_API\Sistema_Residuos_MODEL\obj\Debug\net8.0\Sistema_Residuos_MODEL.genruntimeconfig.cache
+D:\Users\bejac\Desktop\Projetos\Servidor Residuos\Sistema_Residuos_API\Sistema_Residuos_MODEL\obj\Debug\net8.0\ref\Sistema_Residuos_MODEL.dll
