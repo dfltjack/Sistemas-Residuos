@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G9MxkF/PBQE=",
+  "dgSpecHash": "062jGUx2hs0=",
   "success": true,
-  "projectFilePath": "D:\\Users\\bejac\\Desktop\\Projetos\\Servidor Residuos\\Sistema_Residuos_API\\Sistema_Residuos_API\\Sistema_Residuos_API.csproj",
+  "projectFilePath": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_API\\Sistema_Residuos_API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bejac\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\bejac\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

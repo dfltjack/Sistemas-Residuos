@@ -4773,11 +4773,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\bejac\\Desktop\\Projetos\\Servidor Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj",
+      "projectUniqueName": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj",
       "projectName": "Sistema_Residuos_MODEL",
-      "projectPath": "D:\\Users\\bejac\\Desktop\\Projetos\\Servidor Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj",
+      "projectPath": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj",
       "packagesPath": "C:\\Users\\bejac\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\bejac\\Desktop\\Projetos\\Servidor Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\obj\\",
+      "outputPath": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,20 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Users\\bejac\\Desktop\\Projetos\\Servidor Residuos\\Sistema_Residuos_API\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{F14A7DD3-8834-4706-B48B-F2471F9B16FB}|Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj|d:\\users\\bejac\\desktop\\projetos\\servidor residuos\\sistema_residuos_api\\sistema_residuos_model\\services\\servicecalendario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F14A7DD3-8834-4706-B48B-F2471F9B16FB}|Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj|solutionrelative:sistema_residuos_model\\services\\servicecalendario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F14A7DD3-8834-4706-B48B-F2471F9B16FB}|Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj|d:\\users\\bejac\\desktop\\projetos\\servidor residuos\\sistema_residuos_api\\sistema_residuos_model\\viewmodel\\calendariovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F14A7DD3-8834-4706-B48B-F2471F9B16FB}|Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj|solutionrelative:sistema_residuos_model\\viewmodel\\calendariovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F14A7DD3-8834-4706-B48B-F2471F9B16FB}|Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj|d:\\users\\bejac\\desktop\\projetos\\servidor residuos\\sistema_residuos_api\\sistema_residuos_model\\services\\serviceresidencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F14A7DD3-8834-4706-B48B-F2471F9B16FB}|Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj|solutionrelative:sistema_residuos_model\\services\\serviceresidencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,34 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 215,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CalendarioVM.cs",
-              "DocumentMoniker": "D:\\Users\\bejac\\Desktop\\Projetos\\Servidor Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\ViewModel\\CalendarioVM.cs",
-              "RelativeDocumentMoniker": "Sistema_Residuos_MODEL\\ViewModel\\CalendarioVM.cs",
-              "ToolTip": "D:\\Users\\bejac\\Desktop\\Projetos\\Servidor Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\ViewModel\\CalendarioVM.cs",
-              "RelativeToolTip": "Sistema_Residuos_MODEL\\ViewModel\\CalendarioVM.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAkwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-18T21:40:38.935Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ServiceCalendario.cs",
-              "DocumentMoniker": "D:\\Users\\bejac\\Desktop\\Projetos\\Servidor Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\Services\\ServiceCalendario.cs",
-              "RelativeDocumentMoniker": "Sistema_Residuos_MODEL\\Services\\ServiceCalendario.cs",
-              "ToolTip": "D:\\Users\\bejac\\Desktop\\Projetos\\Servidor Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\Services\\ServiceCalendario.cs",
-              "RelativeToolTip": "Sistema_Residuos_MODEL\\Services\\ServiceCalendario.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAgwBwAAABGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-18T21:36:45.401Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -80,26 +41,11 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 185,
-          "SelectedChildIndex": 0,
-          "Children": [
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ServiceResidencia.cs",
-              "DocumentMoniker": "D:\\Users\\bejac\\Desktop\\Projetos\\Servidor Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\Services\\ServiceResidencia.cs",
-              "RelativeDocumentMoniker": "Sistema_Residuos_MODEL\\Services\\ServiceResidencia.cs",
-              "ToolTip": "D:\\Users\\bejac\\Desktop\\Projetos\\Servidor Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\Services\\ServiceResidencia.cs",
-              "RelativeToolTip": "Sistema_Residuos_MODEL\\Services\\ServiceResidencia.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAYwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-18T21:34:36.717Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             }
           ]
         }

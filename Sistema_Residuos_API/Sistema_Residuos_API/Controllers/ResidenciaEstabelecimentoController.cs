@@ -42,7 +42,7 @@ namespace Sistema_Residuos_API.Controllers
         public async Task<IActionResult> Put(ResidenciaEstabelecimentoVM residenciasEstabelecimentoVM)
         {
             await _service.AlterarResidenciaAsync(residenciasEstabelecimentoVM);
-            return Ok("Residência/Estabelecimento Cadastrado(a) com sucesso");
+            return Ok("Residência/Estabelecimento Alterado(a) com sucesso");
         }
 
         [HttpDelete("DeleteResidencia/{id}")]

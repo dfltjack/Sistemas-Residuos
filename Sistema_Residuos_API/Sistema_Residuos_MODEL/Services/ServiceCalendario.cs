@@ -43,6 +43,20 @@ namespace Sistema_Residuos_MODEL.Services
             }
 
         }
-        
+
+        public async Task<CalendarioVM> AlterarCalendarioAsync(CalendarioVM calendarioVM)
+        {
+            var calendario = new CalendarioColetum()
+            {
+                CalendarioColetaId = calendarioVM.CalendarioColetaId,
+                TipoResiduoId = calendarioVM.TipoResiduoId,
+                Horario = calendarioVM.Horario,
+                DiaSemana = calendarioVM.DiaSemana
+            };
+
+            await oRepositoryCalendario.AlterarAsync(calendario);
+                
+            return calendarioVM;
+        }
     }
 }
