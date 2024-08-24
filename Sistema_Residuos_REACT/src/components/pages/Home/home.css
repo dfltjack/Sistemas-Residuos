@@ -30,7 +30,7 @@
 .copyright{
     position: fixed;
     bottom: 0;
-    left: 150vh;    
+    left: 147vh;    
     height: auto;    
     width: 100vh;
     max-width: 100vh;
@@ -42,4 +42,28 @@
 .text{
     text-align: justify;
     font-size: large;
+    margin: 10px;
+    border-radius: 2%;
+    padding: 10px;
+    background-color: rgb(238, 226, 226);
+}
+
+.h3{
+    text-align: center;
+    font-size: large;
+}
+
+.col-md-14 {
+    flex: 0 0 auto;
+    width: 116.666667%;
+}
+
+.col-md-16 {
+    flex: 0 0 auto;
+    width: 133.333333%;
+}
+
+.col-md-18 {
+    flex: 0 0 auto;
+    width: 150%;
 }

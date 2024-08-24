@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
+import NavBarMain from './components/commons/navbar/navbar';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    {/* <NavBarMain /> */}
-    <App />
+    <NavBarMain />
+    {/* <App /> */}
   </BrowserRouter>
 );
 

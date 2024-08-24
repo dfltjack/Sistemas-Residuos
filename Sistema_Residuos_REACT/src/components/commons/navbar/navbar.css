@@ -1,0 +1,33 @@
+  .navbar-brand{
+    height: 45px;
+    align-items: baseline;
+  }
+
+  .navbar-light .navbar-brand {
+    color: #f1f5f9;
+    margin-right: 92rem;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    bottom: 0;
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
+    color: #f8f9fa;
+    position: relative;
+    left: 840px;
+    bottom: 37px;
+  }
+  
+  .navbar-brand .fa-house {
+    margin-right: 8px;
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: baseline;  
+  }
+  
+  .nav-link .fa {
+    margin-right: 4px;
+  }
