@@ -36,9 +36,8 @@ public partial class Sistema_ResiduosContext : DbContext
     {
         modelBuilder.Entity<CalendarioColetum>(entity =>
         {
-            entity.HasKey(e => e.CalendarioColetaId).HasName("PK__Calendar__D356C6628AB9F36E");
-
-            entity.HasIndex(e => new { e.DiaSemana, e.Horario }, "idx_calendariocoleta_dia_horario");
+            entity.HasKey(e => e.CalendarioColetaId).HasName("PK__Calendar__D356C6628AB9F36E");           
+            entity.HasIndex(e => new { e.DiaSemana, e.Horario }, "idx_calendariocoleta_dia_horario");           
 
             entity.Property(e => e.DiaSemana)
                 .IsRequired()

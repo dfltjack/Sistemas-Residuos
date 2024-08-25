@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Sistema_Residuos_MODEL.Models;
+using Sistema_Residuos_MODEL.Repositories;
+using Sistema_Residuos_MODEL.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'Identity_ContextConnection' not found.");
@@ -7,6 +9,10 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 // Add services to the container.
 builder.Services.AddDbContext<Sistema_ResiduosContext>(opt => opt.UseSqlServer(connectionString));
 builder.Services.AddControllers();
+
+builder.Services.AddScoped<RepositoryCalendario>();
+builder.Services.AddScoped<ServiceCalendario>();
+
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

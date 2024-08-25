@@ -3,6 +3,7 @@ using Sistema_Residuos_MODEL.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ namespace Sistema_Residuos_MODEL.ViewModel
 
         [Display(Name = "Tipo de Resíduo")]
         [StringLength(100, MinimumLength = 5, ErrorMessage = "O Tamanho não pode ser menor que 5")]
-        public int TipoResiduoId { get; set; }
+        public int? TipoResiduoId { get; set; }
 
         public TimeOnly Horario { get; set; }
 

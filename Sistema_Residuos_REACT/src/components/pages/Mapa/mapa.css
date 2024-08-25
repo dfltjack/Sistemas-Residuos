@@ -1,0 +1,18 @@
+.containermap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 95vh; /* Ajuste a altura conforme necessário */
+}
+
+.legend {
+    width: 25%;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-right: 1px solid #ddd;
+}
+
+.map-container {
+    width: 75%;
+    height: 95%;
+}

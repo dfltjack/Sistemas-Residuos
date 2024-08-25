@@ -55,7 +55,7 @@ namespace Sistema_Residuos_MODEL.Services
             };
 
             await oRepositoryCalendario.AlterarAsync(calendario);
-                
+
             return calendarioVM;
         }
     }

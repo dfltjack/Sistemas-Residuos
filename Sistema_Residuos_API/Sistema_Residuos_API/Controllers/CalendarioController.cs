@@ -28,11 +28,11 @@ namespace Sistema_Residuos_API.Controllers
         [HttpGet("GetCalendarioById/{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            return Ok(await _service.oRepositoryCalendario.SelecionarChaveAsync());
+            return Ok(await _service.oRepositoryCalendario.SelecionarChaveAsync(id));
         }
 
         [HttpPost("PostCalendario")]
-        public async Task<IActionResult> Post(CalendarioVM calendarioVM)
+        public async Task<IActionResult> Post([FromBody]CalendarioVM calendarioVM)
         {
             await _service.IncluirCalendarioAsync(calendarioVM);
             return Ok("Calendário de Coleta Cadastrado com Sucesso");

@@ -1,27 +1,10 @@
 import React from "react";
 import "./home.css";
-import {
-  Container,
-  Nav,
-  Navbar,
-  Card,
-  Button,
-  Row,
-  Col,
-} from "react-bootstrap";
+import { Card, Button, Row, Col} from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHouse,
-  faAddressCard,
-  faPhone,
-  faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
-import { FaSignInAlt, FaUserPlus, FaBell } from "react-icons/fa";
-import { Link, Route, Routes, useNavigate, Navigate } from "react-router-dom";
-// import Cadastro from "../Cadastro/cadastro";
-// import Login from "../Login/login";
-// import Notificacoes from "../Notificacoes/notificacoes";
-import NavBarMain from "../../commons/navbar/navbar";
+import { faAddressCard, faPhone, faEnvelope} from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
+
 
 const Home = () => {
   const navigate = useNavigate();
@@ -35,12 +18,12 @@ const Home = () => {
           </strong>
         </p>
       </div>
-
+      
       <Row>
         <Col md={4} className="d-flex flex-column">
           <Row className="mb-4 d-flex align-items-center">
             <img
-              src="/cadastroCasa.png"
+              src="/assets/cadastroCasa.png"             
               alt="Imagem Cadastro"
               className="mr-3"
               style={{ width: "150px", height: "150px" }}
@@ -62,7 +45,7 @@ const Home = () => {
           </Row>
           <Row className="mb-4 d-flex align-items-center">
             <img
-              src="/calendario.jpg"
+              src="/assets/calendario.jpg"
               alt="Imagem Calendário"
               className="mr-3"
               style={{ width: "150px", height: "150px" }}
@@ -85,7 +68,7 @@ const Home = () => {
           </Row>
           <Row className="mb-4 d-flex align-items-center">
             <img
-              src="/mapa.jpg"
+              src="/assets/mapa.jpg"
               alt="Imagem 3"
               className="mr-3"
               style={{ width: "150px", height: "150px" }}
@@ -108,19 +91,23 @@ const Home = () => {
         <Col md={8}>
           <div className="container-fluid1">
             <div className="row">
-              <h3 className="text">
-                <p className="text">
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nosso objetivo é desenvolver um
+              <h3 className="text">                
+                <p>
+                  Nosso objetivo é desenvolver um
                   sistema integrado que facilite a gestão de resíduos sólidos na
                   comunidade, promovendo a reciclagem e a correta destinação do
                   lixo. Queremos criar um impacto positivo no meio ambiente e na
                   qualidade de vida dos moradores.
-                </p>
-                <p>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vamos explorar alguns países que
+                  <br></br>
+                  <br></br>
+                  Vamos explorar alguns países que
                   são referências em gestão de resíduos sólidos. Esses exemplos
                   inspiradores mostram como abordagens inovadoras podem fazer a
                   diferença:
+
+                  <br></br>
+                  <br></br>
+
                   <li>
                    
                       Alemanha: Economia Circular e Coleta Seletiva Eficiente A
@@ -152,7 +139,7 @@ const Home = () => {
             </div>
           </div>
         </Col>
-      </Row>
+      </Row>     
 
       <footer>
         <div className="footer-container">
