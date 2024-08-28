@@ -64,9 +64,13 @@ namespace Sistema_Residuos_MODEL.Repositories
         public async Task ExcluirAsync(T obj)
         {
             _context.Set<T>().Remove(obj);
-            if (!_saveChanges)
+            if (_saveChanges)
             {
                 await _context.SaveChangesAsync();
+            }
+            else
+            {
+                throw new Exception("Calendário não encontrado");
             }
         }
 

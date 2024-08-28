@@ -50,7 +50,7 @@ namespace Sistema_Residuos_API.Controllers
         {
             try
             {
-                await _service.oRepositoryCalendario.ExcluirAsync(id);
+                await _service.oRepositoryCalendario.ExcluirAsync(id);             
                 return Ok("Calendário Excluido(a) com sucesso");
             }
             catch (Exception ex)

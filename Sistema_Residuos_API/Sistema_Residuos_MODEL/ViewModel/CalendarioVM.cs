@@ -15,10 +15,9 @@ namespace Sistema_Residuos_MODEL.ViewModel
         [Key]
         [Display(Name = "Código do Calendário")]
         public int CalendarioColetaId { get; set; }
-
-        [Display(Name = "Tipo de Resíduo")]
-        [StringLength(100, MinimumLength = 5, ErrorMessage = "O Tamanho não pode ser menor que 5")]
+        
         public int? TipoResiduoId { get; set; }
+
 
         public TimeOnly Horario { get; set; }
 
