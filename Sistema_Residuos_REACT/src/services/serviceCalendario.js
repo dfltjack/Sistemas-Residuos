@@ -1,7 +1,7 @@
 import Api from "../helpers/api"
 
 export async function GetCalendario(){
-    return await Api.get('/calendario');
+    return await Api.get('/Calendario');
 }
 
 export async function GetCalendarioById(id){

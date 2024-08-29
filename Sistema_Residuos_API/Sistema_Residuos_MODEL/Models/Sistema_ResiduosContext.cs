@@ -30,7 +30,7 @@ public partial class Sistema_ResiduosContext : DbContext
     public virtual DbSet<TiposResiduo> TiposResiduos { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Data Source=jacknotebook\\sqlexpress;Initial Catalog=Sistema_Residuos;Integrated Security=True;trustservercertificate=true");
+        => optionsBuilder.UseSqlServer("Data Source=jacknotebook\\sqlexpress;Initial Catalog=Sistema_Residuos;Integrated Security=True;trustservercertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

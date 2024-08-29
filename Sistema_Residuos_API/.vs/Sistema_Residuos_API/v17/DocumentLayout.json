@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{978DF51C-239C-4859-83F3-87213555F507}|Sistema_Residuos_API\\Sistema_Residuos_API.csproj|c:\\users\\bejac\\desktop\\sistemas residuos\\sistema_residuos_api\\sistema_residuos_api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{978DF51C-239C-4859-83F3-87213555F507}|Sistema_Residuos_API\\Sistema_Residuos_API.csproj|solutionrelative:sistema_residuos_api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F14A7DD3-8834-4706-B48B-F2471F9B16FB}|Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj|c:\\users\\bejac\\desktop\\sistemas residuos\\sistema_residuos_api\\sistema_residuos_model\\repositories\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F14A7DD3-8834-4706-B48B-F2471F9B16FB}|Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj|solutionrelative:sistema_residuos_model\\repositories\\repositorybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -30,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 215,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,56 +62,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_API\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Sistema_Residuos_API\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_API\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Sistema_Residuos_API\\Properties\\launchSettings.json",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABoAAABFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-27T13:34:50.956Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_API\\Program.cs",
               "RelativeDocumentMoniker": "Sistema_Residuos_API\\Program.cs",
               "ToolTip": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_API\\Program.cs",
               "RelativeToolTip": "Sistema_Residuos_API\\Program.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAACwAAAAZAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD0AAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T17:44:46.936Z"
+              "WhenOpened": "2024-08-26T17:44:46.936Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "RepositoryBase.cs",
               "DocumentMoniker": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\Repositories\\RepositoryBase.cs",
               "RelativeDocumentMoniker": "Sistema_Residuos_MODEL\\Repositories\\RepositoryBase.cs",
               "ToolTip": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\Repositories\\RepositoryBase.cs",
               "RelativeToolTip": "Sistema_Residuos_MODEL\\Repositories\\RepositoryBase.cs",
-              "ViewState": "AQIAAGQAAAAAAAAAAAASwHcAAAAJAAAA",
+              "ViewState": "AQIAAGQAAAAAAAAAAAASwHIAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T18:05:47.084Z"
+              "WhenOpened": "2024-08-26T18:05:47.084Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "CalendarioController.cs",
               "DocumentMoniker": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_API\\Controllers\\CalendarioController.cs",
               "RelativeDocumentMoniker": "Sistema_Residuos_API\\Controllers\\CalendarioController.cs",
               "ToolTip": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_API\\Controllers\\CalendarioController.cs",
               "RelativeToolTip": "Sistema_Residuos_API\\Controllers\\CalendarioController.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAADgvzMAAAANAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAwBYAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T18:03:01.965Z"
+              "WhenOpened": "2024-08-26T18:03:01.965Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "CalendarioVM.cs",
               "DocumentMoniker": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\ViewModel\\CalendarioVM.cs",
               "RelativeDocumentMoniker": "Sistema_Residuos_MODEL\\ViewModel\\CalendarioVM.cs",
@@ -123,7 +109,8 @@
               "RelativeToolTip": "Sistema_Residuos_MODEL\\ViewModel\\CalendarioVM.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T11:12:23.806Z"
+              "WhenOpened": "2024-08-26T11:12:23.806Z",
+              "EditorCaption": ""
             }
           ]
         }

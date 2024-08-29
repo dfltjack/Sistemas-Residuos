@@ -18,12 +18,26 @@ namespace Sistema_Residuos_API.Controllers
             _context = context;
             _service = service;
         }
-
+    
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return Ok(await _service.oRepositoryCalendario.SelecionarTodosAsync());
+            try
+            {
+                var result = await _service.oRepositoryCalendario.SelecionarTodosAsync();
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                // Logue o erro para diagnósticos futuros
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
+
+        //public async Task<IActionResult> Get()
+        //{
+        //    return Ok(await _service.oRepositoryCalendario.SelecionarTodosAsync());
+        //}
 
         [HttpGet("GetCalendarioById/{id}")]
         public async Task<IActionResult> Get(int id)

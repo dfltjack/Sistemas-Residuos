@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Sistema_Residuos_MODEL.Models;
@@ -41,8 +42,23 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.Use(async (context, next) =>
+{
+    try
+    {
+        await next.Invoke();
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Erro durante a requisição: {ex.Message}");
+        throw; // Re-throw the exception to ensure it gets logged elsewhere
+    }
+});
+
+
+
 app.UseCors();
-//app.UseAuthorization();
+app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
