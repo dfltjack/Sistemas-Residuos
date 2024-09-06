@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sistema_Residuos_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4882aa8d9a49cd077f2c7d2dda67706849d14ff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+860ca68ca7a2a9433342e5a833a5c6df0496d8fe")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sistema_Residuos_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sistema_Residuos_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

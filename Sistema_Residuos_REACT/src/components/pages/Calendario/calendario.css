@@ -11,10 +11,47 @@
 .react-calendar {
     width: 100%;
     height: auto;
-    font-size: 1.5em; /* Ajuste o tamanho da fonte conforme necessário */
+    font-size: 1.0em; /* Ajuste o tamanho da fonte conforme necessário */
     background-color: #f5f5f5;
 }
 
 .react-calendar__tile {
-    height: 80px; /* Ajuste a altura das células conforme necessário */
+    height: 90px; /* Ajuste a altura das células conforme necessário */
+}
+
+.coleta-date {
+    background-color: #ffeb3b; /* Cor de fundo para dias de coleta */
+}
+
+.tile-content {
+    font-size: 10px;
+    color: #000;
+}
+
+.segunda-feira {
+    background-color: #ffcdce; /* Cor vermelha clara */
+}
+
+.terça-feira {
+    background-color: #F8BBD0; /* Cor rosa clara */
+}
+
+.quarta-feira {
+    background-color: #E1BEE7; /* Cor roxa clara */
+}
+
+.quinta-feira {
+    background-color: #D1C4E9; /* Cor roxa mais escura */
+}
+
+.sexta-feira {
+    background-color: #C5CAE9; /* Cor azul clara */
+}
+
+.sabado {
+    background-color: #BBDEFB; /* Cor azul clara */
+}
+
+.domingo {
+    background-color: #B3E5FC; /* Cor azul mais clara */
 }
