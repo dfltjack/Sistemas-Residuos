@@ -38,6 +38,10 @@
       {
          "Name": "[dbo].[TiposResiduo]",
          "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tokens]",
+         "ObjectType": 0
       }
    ],
    "UiHint": "jacknotebook\\sqlexpress.Sistema_Residuos.dbo",

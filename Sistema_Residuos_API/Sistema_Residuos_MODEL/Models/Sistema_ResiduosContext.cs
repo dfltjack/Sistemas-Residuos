@@ -29,15 +29,19 @@ public partial class Sistema_ResiduosContext : DbContext
 
     public virtual DbSet<TiposResiduo> TiposResiduos { get; set; }
 
+    public virtual DbSet<Token> Tokens { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Data Source=jacknotebook\\sqlexpress;Initial Catalog=Sistema_Residuos;Integrated Security=True;trustservercertificate=True");
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("Data Source=jacknotebook\\sqlexpress;Initial Catalog=Sistema_Residuos;Integrated Security=True;Encrypt=True; trustservercertificate=true");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<CalendarioColetum>(entity =>
         {
-            entity.HasKey(e => e.CalendarioColetaId).HasName("PK__Calendar__D356C6628AB9F36E");           
-            entity.HasIndex(e => new { e.DiaSemana, e.Horario }, "idx_calendariocoleta_dia_horario");           
+            entity.HasKey(e => e.CalendarioColetaId).HasName("PK__Calendar__D356C6628AB9F36E");
+
+            entity.HasIndex(e => new { e.DiaSemana, e.Horario }, "idx_calendariocoleta_dia_horario");
 
             entity.Property(e => e.DiaSemana)
                 .IsRequired()
@@ -46,7 +50,7 @@ public partial class Sistema_ResiduosContext : DbContext
 
             entity.HasOne(d => d.TipoResiduo).WithMany(p => p.CalendarioColeta)
                 .HasForeignKey(d => d.TipoResiduoId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
+                .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK__Calendari__TipoR__3F466844");
         });
 
@@ -65,7 +69,6 @@ public partial class Sistema_ResiduosContext : DbContext
 
             entity.HasOne(d => d.ResidenciaEstabelecimento).WithMany(p => p.Notificacos)
                 .HasForeignKey(d => d.ResidenciaEstabelecimentoId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Notificac__Resid__4316F928");
         });
 
@@ -80,7 +83,6 @@ public partial class Sistema_ResiduosContext : DbContext
 
             entity.HasOne(d => d.TipoResiduo).WithMany(p => p.PontosColeta)
                 .HasForeignKey(d => d.TipoResiduoId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__PontosCol__TipoR__45F365D3");
         });
 
@@ -98,7 +100,6 @@ public partial class Sistema_ResiduosContext : DbContext
 
             entity.HasOne(d => d.TipoEstabelecimento).WithMany(p => p.ResidenciasEstabelecimentos)
                 .HasForeignKey(d => d.TipoEstabelecimentoId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Residenci__TipoE__398D8EEE");
         });
 
@@ -118,6 +119,22 @@ public partial class Sistema_ResiduosContext : DbContext
             entity.ToTable("TiposResiduo");
 
             entity.HasIndex(e => e.TipoResiduoId, "UQ__TiposRes__C9AE645581A4E1EB").IsUnique();
+
+            entity.Property(e => e.Resíduo)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+        });
+
+        modelBuilder.Entity<Token>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Tokens__3214EC078EB199F1");
+
+            entity.Property(e => e.CreatedDate)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.TokenValue)
+                .IsRequired()
+                .HasMaxLength(500);
         });
 
         OnModelCreatingPartial(modelBuilder);

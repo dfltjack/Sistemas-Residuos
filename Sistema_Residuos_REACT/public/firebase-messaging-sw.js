@@ -1,10 +1,8 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-restricted-globals */  
+import { useEffect } from 'react';
+import { getMessaging, getToken } from 'firebase/messaging';
+import { initializeApp } from 'firebase/app';
+import { SaveToken } from './services/tokenService'; // Ajuste o caminho conforme necessário
 
-importScripts('https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js');
-importScripts('https://www.gstatic.com/firebasejs/10.13.1/firebase-messaging.js');
-
-// Configuração do Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyCQ_yt9g7fWmo_rM3gHIPIyr1gZqSnQUtQ",
   authDomain: "teste-sistema-residuos.firebaseapp.com",
@@ -15,16 +13,31 @@ const firebaseConfig = {
   databaseURL: "https://teste-sistema-residuos-default-rtdb.firebaseio.com/"
 };
 
-firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+const messaging = getMessaging(app);
 
-const messaging = firebase.messaging();
+const useFirebaseMessaging = () => {
+  useEffect(() => {
+    const fetchToken = async () => {
+      try {
+        const currentToken = await getToken(messaging, {
+          vapidKey: 'BCEfjPsPfKhmgCGSIY5oGT0W4DjLL-WviBc4UBQkcTGHCVnIS2hq4Zhd1qm_cprqMrmPbcYcKsgkmWFyuJR_HYo' // Substitua com sua chave VAPID
+        });
+        if (currentToken) {
+          console.log('Token de notificação:', currentToken);
+          await SaveToken(currentToken);
+          console.log('Token salvo com sucesso.');
+        } else {
+          console.log('Nenhum token disponível. Solicite permissão para receber notificações.');
+        }
+      } catch (error) {
+        console.error('Erro ao obter token de notificação:', error);
+      }
+    };
 
-// Quando uma mensagem push é recebida em segundo plano
-messaging.onBackgroundMessage((payload) => {
-  console.log('Received background message: ', payload);
-  const notificationTitle = payload.notification.title;
-  const notificationOptions = {
-    body: payload.notification.body,
-  };
-  self.registration.showNotification(notificationTitle, notificationOptions);
-});
+    fetchToken();
+  }, []);
+};
+
+export default useFirebaseMessaging;
+

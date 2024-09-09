@@ -9,6 +9,8 @@ public partial class TiposResiduo
 {
     public int TipoResiduoId { get; set; }
 
+    public string Resíduo { get; set; }
+
     public virtual ICollection<CalendarioColetum> CalendarioColeta { get; set; } = new List<CalendarioColetum>();
 
     public virtual ICollection<PontosColetum> PontosColeta { get; set; } = new List<PontosColetum>();

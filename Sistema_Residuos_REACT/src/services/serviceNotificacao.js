@@ -5,7 +5,7 @@ export async function GetNotificacao(){
 }
 
 export async function GetNotificacaoById(id){
-    return await Api.get(`/notificacao/${id}`);
+    return await Api.get(`/notificacao/GetNotificacaoById/${id}`);
 }
 
 export async function PostNotificacao(notificacao){

@@ -4,19 +4,20 @@ import { getMessaging, getToken, onMessage } from 'firebase/messaging';
 
 // Configuração do Firebase
 const firebaseConfig = {
-        apiKey: "AIzaSyCQ_yt9g7fWmo_rM3gHIPIyr1gZqSnQUtQ",
-        authDomain: "teste-sistema-residuos.firebaseapp.com",
-        projectId: "teste-sistema-residuos",
-        storageBucket: "teste-sistema-residuos.appspot.com",
-        messagingSenderId: "885903321679",
-        appId: "1:885903321679:web:98c16073bc55656f1a983a",
-        measurementId: "G-RFSV27RWXD"
-    };
+    apiKey: "AIzaSyCQ_yt9g7fWmo_rM3gHIPIyr1gZqSnQUtQ",
+    authDomain: "teste-sistema-residuos.firebaseapp.com",
+    projectId: "teste-sistema-residuos",
+    storageBucket: "teste-sistema-residuos.appspot.com",
+    messagingSenderId: "885903321679",
+    appId: "1:885903321679:web:98c16073bc55656f1a983a",
+    measurementId: "G-RFSV27RWXD"
+};
 
 // Inicializa o Firebase
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const messaging = getMessaging(app);
+
 
 // import firebase, { initializeApp } from 'firebase/app';
 // import { getAnalytics } from "firebase/analytics";

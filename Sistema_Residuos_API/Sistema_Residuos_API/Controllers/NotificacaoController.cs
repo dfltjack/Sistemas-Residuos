@@ -11,11 +11,13 @@ namespace Sistema_Residuos_API.Controllers
     {
         private Sistema_ResiduosContext _context;
         private ServiceNotificacao _service;
+        private TokenService _tokenService;
 
         public NotificacaoController(Sistema_ResiduosContext context, ServiceNotificacao service)
         {
             _context = context;
             _service = service;
+            _tokenService = new TokenService(context);
         }
 
         [HttpGet]
@@ -27,7 +29,7 @@ namespace Sistema_Residuos_API.Controllers
         [HttpGet("GetNotificacaoById/{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            return Ok(await _service.oRepositoryNotificacao.SelecionarChaveAsync());
+            return Ok(await _service.oRepositoryNotificacao.SelecionarChaveAsync(id));
         }
 
         [HttpPost("PostNotificacao")]
@@ -55,6 +57,20 @@ namespace Sistema_Residuos_API.Controllers
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost("SaveToken")]
+        public async Task<IActionResult> SaveToken([FromBody] TokenRequest request)
+        {
+            try
+            {
+                await _tokenService.SaveTokenAsync(request.Token);
+                return Ok(new { message = "Token salvo com sucesso." });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
             }
         }
     }

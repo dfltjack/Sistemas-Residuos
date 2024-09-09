@@ -14,6 +14,8 @@ builder.Services.AddControllers();
 
 builder.Services.AddScoped<RepositoryCalendario>();
 builder.Services.AddScoped<ServiceCalendario>();
+builder.Services.AddScoped<ServiceNotificacao>();
+builder.Services.AddScoped<TokenService>();
 
 builder.Services.AddSwaggerGen(options => {
     options.MapType<TimeOnly>(() => new OpenApiSchema

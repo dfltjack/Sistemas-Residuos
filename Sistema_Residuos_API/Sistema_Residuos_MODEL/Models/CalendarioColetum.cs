@@ -5,10 +5,8 @@ using System.Collections.Generic;
 
 namespace Sistema_Residuos_MODEL.Models;
 
-
 public partial class CalendarioColetum
 {
-
     public int CalendarioColetaId { get; set; }
 
     public int? TipoResiduoId { get; set; }
