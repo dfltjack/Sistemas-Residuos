@@ -42,6 +42,10 @@
       {
          "Name": "[dbo].[Tokens]",
          "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Usuarios]",
+         "ObjectType": 0
       }
    ],
    "UiHint": "jacknotebook\\sqlexpress.Sistema_Residuos.dbo",

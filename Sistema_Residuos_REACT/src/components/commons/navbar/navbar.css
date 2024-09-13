@@ -1,33 +1,30 @@
-  .navbar-brand{
-    height: 45px;
-    align-items: baseline;
-  }
+/* Alinha o título à esquerda */
+.navbar-left {
+  margin-right: auto;
+}
 
-  .navbar-light .navbar-brand {
-    color: #f1f5f9;
-    margin-right: 92rem;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    bottom: 0;
-  }
-  
-  .navbar-light .navbar-nav .nav-link {
-    color: #f8f9fa;
-    position: relative;
-    left: 840px;
-    bottom: 37px;
-  }
-  
-  .navbar-brand .fa-house {
-    margin-right: 8px;
-  }
-  
-  .nav-link {
-    display: flex;
-    align-items: baseline;  
-  }
-  
-  .nav-link .fa {
-    margin-right: 4px;
-  }
+/* Alinha os itens da navbar à direita */
+.navbar-nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Ajusta o espaço entre os itens da navbar */
+.nav-item {
+  margin-right: 15px;
+}
+
+/* Ajusta o texto de boas-vindas */
+/* Ajusta o alinhamento da mensagem de boas-vindas */
+.navbar-text {
+  margin-bottom: -6px; /* Remove qualquer margem inferior */
+  padding-top: 3px; /* Ajusta o padding superior para alinhamento */
+  font-size: 16px; /* Mantém o tamanho da fonte consistente */
+  line-height: 1.5; /* Ajusta a altura da linha para centralização */
+}
+/* Botão de logout estilizado */
+.btn-link {
+  color: #f8f9fa;
+  text-decoration: none;
+}

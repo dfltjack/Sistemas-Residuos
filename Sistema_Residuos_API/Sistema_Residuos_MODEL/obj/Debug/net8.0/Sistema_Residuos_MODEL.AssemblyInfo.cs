@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sistema_Residuos_MODEL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8a4d8dd49cea289dd023fb89fb9805625e85ac4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+253848018b1b3a75506d8d6c70e0edbde947796a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sistema_Residuos_MODEL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sistema_Residuos_MODEL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

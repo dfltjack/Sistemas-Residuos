@@ -1,0 +1,530 @@
+[
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.TipoResiduoController",
+    "Method": "Get",
+    "RelativePath": "api/{Controller}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Controller",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.TipoResiduoController",
+    "Method": "Delete",
+    "RelativePath": "api/{Controller}/DeleteTipoResiduo/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "Controller",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.TipoResiduoController",
+    "Method": "Get",
+    "RelativePath": "api/{Controller}/GetTipoResiduoById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "Controller",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.TipoResiduoController",
+    "Method": "Post",
+    "RelativePath": "api/{Controller}/PostTipoResiduo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipoResiduoVM",
+        "Type": "Sistema_Residuos_MODEL.ViewModel.TipoResiduoVM",
+        "IsRequired": true
+      },
+      {
+        "Name": "Controller",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.TipoResiduoController",
+    "Method": "Put",
+    "RelativePath": "api/{Controller}/PutTipoResiduo",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipoResiduoVM",
+        "Type": "Sistema_Residuos_MODEL.ViewModel.TipoResiduoVM",
+        "IsRequired": true
+      },
+      {
+        "Name": "Controller",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginRequest",
+        "Type": "Sistema_Residuos_MODEL.ViewModel.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.AuthController",
+    "Method": "GetUserInfo",
+    "RelativePath": "api/Auth/Me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.CalendarioController",
+    "Method": "Get",
+    "RelativePath": "api/Calendario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.CalendarioController",
+    "Method": "Delete",
+    "RelativePath": "api/Calendario/DeleteCalendario/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.CalendarioController",
+    "Method": "Get",
+    "RelativePath": "api/Calendario/GetCalendarioById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.CalendarioController",
+    "Method": "Post",
+    "RelativePath": "api/Calendario/PostCalendario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "calendarioVM",
+        "Type": "Sistema_Residuos_MODEL.ViewModel.CalendarioVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.CalendarioController",
+    "Method": "Put",
+    "RelativePath": "api/Calendario/PutCalendario",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "calendarioVM",
+        "Type": "Sistema_Residuos_MODEL.ViewModel.CalendarioVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.NotificacaoController",
+    "Method": "Get",
+    "RelativePath": "api/Notificacao",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.NotificacaoController",
+    "Method": "Delete",
+    "RelativePath": "api/Notificacao/DeleteNotificacao/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.NotificacaoController",
+    "Method": "Get",
+    "RelativePath": "api/Notificacao/GetNotificacaoById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.NotificacaoController",
+    "Method": "Post",
+    "RelativePath": "api/Notificacao/PostNotificacao",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "notificacaoVM",
+        "Type": "Sistema_Residuos_MODEL.ViewModel.NotificacaoVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.NotificacaoController",
+    "Method": "Put",
+    "RelativePath": "api/Notificacao/PutNotificacao",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "notificacaoVM",
+        "Type": "Sistema_Residuos_MODEL.ViewModel.NotificacaoVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.NotificacaoController",
+    "Method": "SaveToken",
+    "RelativePath": "api/Notificacao/SaveToken",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Sistema_Residuos_MODEL.Models.TokenRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.PontosColetaController",
+    "Method": "Get",
+    "RelativePath": "api/PontosColeta",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.PontosColetaController",
+    "Method": "Delete",
+    "RelativePath": "api/PontosColeta/DeletePontosColeta/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.PontosColetaController",
+    "Method": "Get",
+    "RelativePath": "api/PontosColeta/GetPontosColetaById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.PontosColetaController",
+    "Method": "Post",
+    "RelativePath": "api/PontosColeta/PostPontosColeta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pontosColetaVM",
+        "Type": "Sistema_Residuos_MODEL.ViewModel.PontoColetaVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.PontosColetaController",
+    "Method": "Put",
+    "RelativePath": "api/PontosColeta/PutPontosColeta",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pontosColetaVM",
+        "Type": "Sistema_Residuos_MODEL.ViewModel.PontoColetaVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.ResidenciaEstabelecimentoController",
+    "Method": "Get",
+    "RelativePath": "api/ResidenciaEstabelecimento",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.ResidenciaEstabelecimentoController",
+    "Method": "Delete",
+    "RelativePath": "api/ResidenciaEstabelecimento/DeleteResidencia/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.ResidenciaEstabelecimentoController",
+    "Method": "Get",
+    "RelativePath": "api/ResidenciaEstabelecimento/GetResidenciaById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.ResidenciaEstabelecimentoController",
+    "Method": "Post",
+    "RelativePath": "api/ResidenciaEstabelecimento/PostResidencias",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "residenciasEstabelecimentoVM",
+        "Type": "Sistema_Residuos_MODEL.ViewModel.ResidenciaEstabelecimentoVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.ResidenciaEstabelecimentoController",
+    "Method": "Put",
+    "RelativePath": "api/ResidenciaEstabelecimento/PutResidencias",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "residenciasEstabelecimentoVM",
+        "Type": "Sistema_Residuos_MODEL.ViewModel.ResidenciaEstabelecimentoVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.TipoEstabelecimentoController",
+    "Method": "Get",
+    "RelativePath": "api/TipoEstabelecimento",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.TipoEstabelecimentoController",
+    "Method": "Delete",
+    "RelativePath": "api/TipoEstabelecimento/DeleteTipoEstabelecimento/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.TipoEstabelecimentoController",
+    "Method": "Get",
+    "RelativePath": "api/TipoEstabelecimento/GetTipoEstabelecimentoById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.TipoEstabelecimentoController",
+    "Method": "Post",
+    "RelativePath": "api/TipoEstabelecimento/PostTipoEstabelecimento",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipoEstabelecimentoVM",
+        "Type": "Sistema_Residuos_MODEL.ViewModel.TipoEstabelecimentoVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.TipoEstabelecimentoController",
+    "Method": "Put",
+    "RelativePath": "api/TipoEstabelecimento/PutTipoEstabelecimento",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tipoEstabelecimentoVM",
+        "Type": "Sistema_Residuos_MODEL.ViewModel.TipoEstabelecimentoVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UserController",
+    "Method": "Post",
+    "RelativePath": "api/User",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuario",
+        "Type": "Sistema_Residuos_MODEL.Models.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

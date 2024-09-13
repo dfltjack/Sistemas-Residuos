@@ -13,11 +13,18 @@ namespace Sistema_Residuos_API.Controllers
         private ServiceNotificacao _service;
         private TokenService _tokenService;
 
-        public NotificacaoController(Sistema_ResiduosContext context, ServiceNotificacao service)
+        //public NotificacaoController(Sistema_ResiduosContext context, ServiceNotificacao service)
+        //{
+        //    _context = context;
+        //    _service = service;
+        //    _tokenService = new TokenService(context);
+        //}
+
+        public NotificacaoController(Sistema_ResiduosContext context, ServiceNotificacao service, TokenService tokenService)
         {
             _context = context;
             _service = service;
-            _tokenService = new TokenService(context);
+            _tokenService = tokenService;
         }
 
         [HttpGet]

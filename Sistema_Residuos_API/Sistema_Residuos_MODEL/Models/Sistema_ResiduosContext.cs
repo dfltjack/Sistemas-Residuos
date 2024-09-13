@@ -31,8 +31,9 @@ public partial class Sistema_ResiduosContext : DbContext
 
     public virtual DbSet<Token> Tokens { get; set; }
 
+    public virtual DbSet<Usuario> Usuarios { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseSqlServer("Data Source=jacknotebook\\sqlexpress;Initial Catalog=Sistema_Residuos;Integrated Security=True;Encrypt=True; trustservercertificate=true");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -110,6 +111,10 @@ public partial class Sistema_ResiduosContext : DbContext
             entity.ToTable("TiposEstabelecimento");
 
             entity.HasIndex(e => e.TipoEstabelecimentoId, "UQ__TiposEst__FA95A1FEB6543652").IsUnique();
+
+            entity.Property(e => e.Tipo)
+                .HasMaxLength(50)
+                .IsUnicode(false);
         });
 
         modelBuilder.Entity<TiposResiduo>(entity =>
@@ -135,6 +140,26 @@ public partial class Sistema_ResiduosContext : DbContext
             entity.Property(e => e.TokenValue)
                 .IsRequired()
                 .HasMaxLength(500);
+        });
+
+        modelBuilder.Entity<Usuario>(entity =>
+        {
+            entity.HasKey(e => e.UsuarioId).HasName("PK__Usuarios__2B3DE7B874CCEE21");
+
+            entity.HasIndex(e => e.Email, "UQ__Usuarios__A9D10534EB48E72C").IsUnique();
+
+            entity.Property(e => e.Email)
+                .IsRequired()
+                .HasMaxLength(100);
+            entity.Property(e => e.Nome)
+                .IsRequired()
+                .HasMaxLength(100);
+            entity.Property(e => e.Role)
+                .HasMaxLength(10)
+                .HasDefaultValue("cliente");
+            entity.Property(e => e.Senha)
+                .IsRequired()
+                .HasMaxLength(255);
         });
 
         OnModelCreatingPartial(modelBuilder);

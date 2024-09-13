@@ -9,5 +9,7 @@ public partial class TiposEstabelecimento
 {
     public int TipoEstabelecimentoId { get; set; }
 
+    public string Tipo { get; set; }
+
     public virtual ICollection<ResidenciasEstabelecimento> ResidenciasEstabelecimentos { get; set; } = new List<ResidenciasEstabelecimento>();
 }
