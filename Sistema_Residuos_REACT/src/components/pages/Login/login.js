@@ -14,22 +14,39 @@ export default function Login({ onLoginSuccess }) {
         e.preventDefault();
         try {
             const response = await axios.post('https://localhost:5000/api/Auth/login', { email, password });
-            console.log(response.data); // Adicione este log para verificar a resposta
-            const { token, userName } = response.data;
-            
-            // Armazena o token e nome do usuário no localStorage
+            console.log(response.data); // Para verificar a resposta
+    
+            const { token, userName, role } = response.data; // Inclua role na desestruturação
             localStorage.setItem('token', token);
             localStorage.setItem('userName', userName);
-
-            // Atualiza a navbar com as informações do usuário
-            onLoginSuccess(userName, token);
-
-            // Redireciona para a página de dashboard
-            navigate('/dashboard');
+            localStorage.setItem('role', role); // Armazene o role no localStorage
+    
+            navigate('/dashboard'); // Redirecione para a dashboard
         } catch (err) {
             setError('Email ou senha inválidos');
         }
     };
+
+    // const handleLogin = async (e) => {
+    //     e.preventDefault();
+    //     try {
+    //         const response = await axios.post('https://localhost:5000/api/Auth/login', { email, password });
+    //         console.log(response.data); // Adicione este log para verificar a resposta
+    //         const { token, userName } = response.data;
+            
+    //         // Armazena o token e nome do usuário no localStorage
+    //         localStorage.setItem('token', token);
+    //         localStorage.setItem('userName', userName);
+
+    //         // Atualiza a navbar com as informações do usuário
+    //         onLoginSuccess(userName, token);
+
+    //         // Redireciona para a página de dashboard
+    //         navigate('/dashboard');
+    //     } catch (err) {
+    //         setError('Email ou senha inválidos');
+    //     }
+    // };
 
     return (
         <div>

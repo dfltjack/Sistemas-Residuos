@@ -33,7 +33,9 @@ public class UserService
 
     public async Task<Usuario> GetUserByCredentialsAsync(string email, string password)
     {
-        var user = await _context.Usuarios.SingleOrDefaultAsync(u => u.Email == email);
+        var user = await _context.Usuarios
+                .SingleOrDefaultAsync(u => u.Email == email);
+
         if (user == null) return null;
 
         var result = _passwordHasher.VerifyHashedPassword(user, user.Senha, password);

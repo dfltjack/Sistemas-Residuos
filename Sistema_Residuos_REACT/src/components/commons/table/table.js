@@ -20,17 +20,17 @@ const Table = ({ dados = [], columns = [], className = "table table-stripped" })
 
   return (
     <>
-      <table className={className} id="tabela">
-        <thead>
-          <tr>
+      <table style={{color: "white"}} className={className} id="tabela">
+        <thead style={{color: "white"}}>
+          <tr style={{color: "white"}}>
             {columns.map((column) => (
-              <th key={column.name}>{column.name}</th>
+              <th style={{color: "white"}} key={column.name}>{column.name}</th>
             ))}
           </tr>
         </thead>
-        <tbody>
+        <tbody style={{color: "white"}}>
           {dados.map((dado, rowIndex) => (
-            <tr key={`linha-${rowIndex}`}>
+            <tr style={{color: "white"}} key={`linha-${rowIndex}`}>
               {columns.map((col, colIndex) => (
                 <td key={`col-${colIndex}`}>
                   {dado[colIndex] == null

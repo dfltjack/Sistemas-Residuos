@@ -16,6 +16,12 @@ export async function PutCalendario(calendario){
     return await Api.put('/calendario/putcalendario', calendario);
 }
 
-export async function DeleteCalendario(id){
-    return Api.delete(`/calendario/deletecalendario/${id}`);
+export async function DeleteCalendario(id) {
+    try {
+        const response = await Api.delete(`/calendario/deletecalendario/${id}`);
+        return response.data;
+    } catch (error) {
+        console.error('Erro ao excluir calendário:', error);
+        throw error;
+    }
 }

@@ -7,6 +7,7 @@ using System.Text;
 using Sistema_Residuos_MODEL.Models;
 using Sistema_Residuos_MODEL.Repositories;
 using Sistema_Residuos_MODEL.Services;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
@@ -26,19 +27,21 @@ builder.Services.AddScoped<TokenService>(provider =>
 {
     var context = provider.GetRequiredService<Sistema_ResiduosContext>();
     var secretKey = "g6FgCExbTWNC6jmHaK+Fm2WiHRYP8iAQBJcAba2zNmquWSLSw2adkLoqqvlH2JIQqUcbMeZ9J0HT3lROd1WMmA=="; // Sua chave secreta
+   
     return new TokenService(secretKey, context);
 });
 
 // Configure JWT Authentication
 var secretKey = "g6FgCExbTWNC6jmHaK+Fm2WiHRYP8iAQBJcAba2zNmquWSLSw2adkLoqqvlH2JIQqUcbMeZ9J0HT3lROd1WMmA==";
 builder.Services.AddScoped<TokenService>(provider => new TokenService(secretKey, provider.GetRequiredService<Sistema_ResiduosContext>()));
-
 var key = Encoding.ASCII.GetBytes(secretKey);
+
 builder.Services.AddAuthentication(x =>
 {
     x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 })
+
 .AddJwtBearer(x =>
 {
     x.RequireHttpsMetadata = false;
@@ -50,6 +53,12 @@ builder.Services.AddAuthentication(x =>
         ValidateIssuer = false,
         ValidateAudience = false
     };
+});
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("admin", policy => policy.RequireRole("admin"));
+    options.AddPolicy("cliente", policy => policy.RequireRole("cliente"));
 });
 
 // Configure Swagger/OpenAPI
@@ -67,20 +76,21 @@ builder.Services.AddSwaggerGen(options =>
         Description = "JWT Authorization header using the Bearer scheme."
     });
 
+    // Remove a exigência de segurança global para o Swagger, se não for necessário
     options.AddSecurityRequirement(new OpenApiSecurityRequirement
-    {
-        {
-            new OpenApiSecurityScheme
-            {
-                Reference = new OpenApiReference
-                {
-                    Type = ReferenceType.SecurityScheme,
-                    Id = "Bearer"
-                }
-            },
-            new string[] { }
-        }
-    });
+     {
+         {
+             new OpenApiSecurityScheme
+             {
+                 Reference = new OpenApiReference
+                 {
+                     Type = ReferenceType.SecurityScheme,
+                     Id = "Bearer"
+                 }
+             },
+             new string[] { }
+         }
+     });
 
     options.MapType<TimeOnly>(() => new OpenApiSchema
     {
@@ -95,13 +105,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddCors(policyBuilder =>
     policyBuilder.AddDefaultPolicy(policy =>
         policy.WithOrigins("*")
-        .AllowAnyHeader()
-        .AllowAnyMethod())
-);
-
-builder.Services.AddCors(policyBuilder =>
-    policyBuilder.AddDefaultPolicy(policy =>
-        policy.AllowAnyOrigin()
         .AllowAnyHeader()
         .AllowAnyMethod())
 );

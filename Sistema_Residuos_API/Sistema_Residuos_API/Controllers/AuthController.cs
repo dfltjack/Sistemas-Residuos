@@ -30,11 +30,32 @@ namespace Sistema_Residuos_API.Controllers
                 return Unauthorized("Invalid credentials");
 
             // Gera o token JWT
-            var generatedToken = _tokenService.GenerateJwt(user); // Corrigido para usar generatedToken
+            var generatedToken = _tokenService.GenerateJwt(user);
 
-            // Retorna o token e o nome do usuário
-            return Ok(new { token = generatedToken, userName = user.Nome });
+            // Retorna o token, o nome do usuário e o role (admin ou cliente)
+            return Ok(new
+            {
+                token = generatedToken,
+                userName = user.Nome,
+                role = user.Role // Adiciona o role à resposta
+            });
         }
+
+
+        //[HttpPost("login")]
+        //public async Task<IActionResult> Login([FromBody] LoginRequestModel loginRequest)
+        //{
+        //    // Verifica se o usuário existe
+        //    var user = await _userService.GetUserByCredentialsAsync(loginRequest.Email, loginRequest.Password);
+        //    if (user == null)
+        //        return Unauthorized("Invalid credentials");
+
+        //    // Gera o token JWT
+        //    var generatedToken = _tokenService.GenerateJwt(user); // Corrigido para usar generatedToken
+
+        //    // Retorna o token e o nome do usuário
+        //    return Ok(new { token = generatedToken, userName = user.Nome });
+        //}
 
         [Authorize]
         [HttpGet("Me")]
@@ -55,6 +76,8 @@ namespace Sistema_Residuos_API.Controllers
 
             return Ok(new { userName = user.Nome });
         }
+
+
 
     }
 }
