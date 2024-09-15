@@ -8,41 +8,41 @@
     flex-direction: column; /* Alinha os itens verticalmente */
     justify-content: center;
     align-items: center;    
-    width: 157%;
-    margin-left: -29%;
+    width: 170%;
+    margin-left: 1%;
 }
 
 /* Contêiner para alinhar o calendário e a tabela */
 .calendar-table-container {
     display: flex;
     justify-content: space-between; /* Espaço entre calendário e tabela */
-    width: 90%; /* Ajusta a largura do contêiner principal */
-    max-width: 1400px; /* Limita a largura máxima */
+    width: 100%; /* Ajusta a largura do contêiner principal */
+    max-width: 1300px; /* Limita a largura máxima */
     margin-top: 20px;
 }
 
 /* Estilos específicos do calendário */
 .calendar-container {
-    width: 50%; /* Define a largura do calendário */
+    width: 130%; /* Define a largura do calendário */
     max-width: 800px;
     background-color: #2e2e2e; /* Fundo escuro para o calendário */
     color: #ffffff; /* Texto claro */
-    padding: 20px;
+    padding: 0px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    margin-right: 20px; /* Espaço entre o calendário e a tabela */
+    margin-right: 0px; /* Espaço entre o calendário e a tabela */
 }
 
 .react-calendar {
-    width: 100%;
+    width: 130%;
     font-size: 1.1em;
-    background-color: #2e2e2e; /* Mantém o fundo escuro dentro do calendário */
+    background-color: #2e2e2e; 
     border-radius: 10px;
 }
 
 /* Estilos da tabela de cadastro */
 .table-container {
-    width: 50%; /* Define a largura da tabela */
+    width: 66%; /* Define a largura da tabela */
     background-color: #2e2e2e;
     color: #ffffff;
     padding: 20px;
@@ -107,7 +107,7 @@ button:hover {
 }
 
 
-/* .calendar-page-background {
+.calendar-page-background {
     background-color: #1c1c1c; 
     min-height: 100vh; 
     padding: 0; 
@@ -212,8 +212,6 @@ button:hover {
 
 .th{
     color:  white;
-}
-
     max-width: 90vh;
     max-width: 800px; 
     margin: 00 auto;
@@ -221,7 +219,7 @@ button:hover {
     
 }
 
-.react-calendar {
+/* .react-calendar {
     width: 100%;
     height: auto;
     font-size: 1.0em; 
@@ -268,4 +266,4 @@ button:hover {
 .domingo {
     background-color: #B3E5FC; 
 }  
-*/ 
+  */
