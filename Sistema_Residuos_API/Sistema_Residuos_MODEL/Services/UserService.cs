@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Sistema_Residuos_MODEL.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 public class UserService
@@ -48,8 +45,23 @@ public class UserService
         return null;
     }
 
+    public async Task<Usuario> GetUserByIdAsync(int UsuarioId) // Método assíncrono para obter usuário por ID
+    {
+        return await _context.Usuarios.FindAsync(UsuarioId);
+    }
+
+    public async Task<List<Usuario>> GetAllUsersAsync() // Método assíncrono para obter todos os usuários
+    {
+        return await _context.Usuarios.ToListAsync();
+    }
+
     public Usuario GetUserById(int userId) // Corrigido para usar INT
     {
         return _context.Usuarios.Find(userId);
+    }
+
+    public async Task<Usuario> GetUserByEmailAsync(string email)
+    {
+        return await _context.Usuarios.SingleOrDefaultAsync(u => u.Email == email);
     }
 }
