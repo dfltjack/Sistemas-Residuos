@@ -20,11 +20,13 @@ export default function Login({ onLoginSuccess }) {
             localStorage.setItem('token', token);
             localStorage.setItem('userName', userName);
             localStorage.setItem('role', role); // Armazene o role no localStorage
-    
+           
             navigate('/dashboard'); // Redirecione para a dashboard
+            
         } catch (err) {
             setError('Email ou senha inválidos');
         }
+        window.location.reload(false);  // Recarrega a página
     };
 
     // const handleLogin = async (e) => {
@@ -80,13 +82,18 @@ export default function Login({ onLoginSuccess }) {
                                     required
                                 />
                             </Form.Group>
-                            <Button variant="primary" type="submit" className="w-100 mt-3">
+                            <Button 
+                                variant="primary" 
+                                type="submit" 
+                                className="w-100 mt-3"                                
+                            >
                                 Entrar
                             </Button>
                             <Button
                                 variant="link"
                                 onClick={() => navigate('/cadastro')}
                                 className="w-100 mt-2"
+                                style={{color: "blue"}}
                             >
                                 Criar Conta
                             </Button>

@@ -7,7 +7,7 @@ import Login from '../../pages/Login/login';
 import Mapa from '../../pages/Mapa/mapa';
 import Calendario from '../../pages/Calendario/calendario';
 import Notificacoes from '../../pages/Notificacoes/notificacoes';
-import { FaSignInAlt, FaUserPlus, FaBell, FaSignOutAlt } from 'react-icons/fa';
+import { FaSignInAlt, FaUserPlus, FaBell, FaSignOutAlt, FaCalendar, FaMap } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse } from '@fortawesome/free-solid-svg-icons';
 import './navbar.css';
@@ -62,10 +62,21 @@ const NavBarMain = () => {
                   <span className="navbar-text text-white me-3">Bem-vindo, {userName}!</span>
 
                   <Nav.Item>
+                    <Nav.Link as={Link} to="/calendario">
+                      <FaCalendar /> &nbsp;Calendario
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link as={Link} to="/mapa">
+                      <FaMap /> &nbsp;Mapa
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
                     <Nav.Link as={Link} to="/notificacoes">
                       <FaBell /> &nbsp;Notificações
                     </Nav.Link>
-                  </Nav.Item>
+                  </Nav.Item>                  
+                  
                   <Nav.Item>
                     <Button variant="link" onClick={handleLogout} className="text-white">
                       <FaSignOutAlt /> &nbsp;Logout
