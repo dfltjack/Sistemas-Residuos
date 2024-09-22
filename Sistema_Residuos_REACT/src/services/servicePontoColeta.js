@@ -1,11 +1,11 @@
 import Api from "../helpers/api"
 
 export async function GetPontoColeta(){
-    return await Api.get('/pontocoleta');
+    return await Api.get('/pontoscoleta');
 }
 
 export async function GetPontoColetaById(id){
-    return await Api.get(`/pontocoleta/${id}`);
+    return await Api.get(`/pontoscoleta/${id}`);
 }
 
 export async function PostPontoColeta(pontocoleta){

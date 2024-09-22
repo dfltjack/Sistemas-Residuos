@@ -70,7 +70,7 @@ namespace Sistema_Residuos_MODEL.Repositories
             }
             else
             {
-                throw new Exception("Calendário não encontrado");
+                throw new Exception("não encontrado");
             }
         }
 
