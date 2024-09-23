@@ -15,13 +15,13 @@ namespace Sistema_Residuos_MODEL.ViewModel
         [Display(Name = "Código do Ponto de Coleta")]
         public int PontoColetaId { get; set; }
         [Display(Name = "Latitude")]
-        public decimal Latitude { get; set; }
+        public string Latitude { get; set; }
         [Display(Name = "Longitude")]
-        public decimal Longitude { get; set; }
+        public string Longitude { get; set; }
 
         public int TipoResiduoId { get; set; }
 
-        public virtual TiposResiduo TipoResiduo { get; set; }
+        //public virtual TiposResiduo TipoResiduo { get; set; }
 
         public PontoColetaVM()
         {

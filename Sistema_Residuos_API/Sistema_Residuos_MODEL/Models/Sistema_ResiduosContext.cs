@@ -34,7 +34,7 @@ public partial class Sistema_ResiduosContext : DbContext
     public virtual DbSet<Usuario> Usuarios { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Data Source=jacknotebook\\sqlexpress;Initial Catalog=Sistema_Residuos;Integrated Security=True;Encrypt=True; trustservercertificate=true");
+        => optionsBuilder.UseSqlServer("Data Source=jacknotebook\\sqlexpress;Initial Catalog=Sistema_Residuos;Integrated Security=True;Encrypt=True;trustservercertificate=true");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -79,8 +79,14 @@ public partial class Sistema_ResiduosContext : DbContext
 
             entity.HasIndex(e => new { e.Latitude, e.Longitude }, "idx_pontoscoleta_localizacao");
 
-            entity.Property(e => e.Latitude).HasColumnType("decimal(9, 6)");
-            entity.Property(e => e.Longitude).HasColumnType("decimal(9, 6)");
+            entity.Property(e => e.Latitude)
+                .IsRequired()
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.Longitude)
+                .IsRequired()
+                .HasMaxLength(50)
+                .IsUnicode(false);
 
             entity.HasOne(d => d.TipoResiduo).WithMany(p => p.PontosColeta)
                 .HasForeignKey(d => d.TipoResiduoId)

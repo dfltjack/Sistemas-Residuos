@@ -11,7 +11,7 @@ namespace Sistema_Residuos_API.Controllers
     public class PontosColetaController : Controller
     {
         private Sistema_ResiduosContext _context;
-        private ServicePontosColeta _service;
+        private readonly ServicePontosColeta _service;
 
         public PontosColetaController(Sistema_ResiduosContext context, ServicePontosColeta service)
         {
@@ -22,7 +22,15 @@ namespace Sistema_Residuos_API.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return Ok(await _service._oRepositoryPontosColeta.SelecionarTodosAsync());
+            try
+            {
+                var result = await _service._oRepositoryPontosColeta.SelecionarTodosAsync();
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }            
         }
 
         [HttpGet("GetPontosColetaById/{id}")]

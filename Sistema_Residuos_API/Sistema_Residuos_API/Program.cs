@@ -23,6 +23,7 @@ builder.Services.AddScoped<ServiceCalendario>();
 builder.Services.AddScoped<ServiceNotificacao>();
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<ServicePontosColeta>();
 builder.Services.AddScoped<TokenService>(provider =>
 {
     var context = provider.GetRequiredService<Sistema_ResiduosContext>();
