@@ -59,7 +59,7 @@ const AdminCalendario = () => {
           },
         ],
       },
-    ]);
+  ]);
 
   const handleChange = (event, value) => {
     setCalendario({
@@ -195,7 +195,7 @@ const AdminCalendario = () => {
             tileContent={tileContent}
           />
         </div>
-        <div className="table-container">
+         <div className="table-container">
           {" "}
           {/* Tabela de cadastro */}
           <h2 style={{ textAlign: "center" }}>Cadastro de dias de Coleta</h2>
@@ -207,7 +207,7 @@ const AdminCalendario = () => {
                   readOnly={habilitar}
                   type="time"
                   id="horario"
-                  step="1"
+                 step="1"
                   value={calendario.horario || ""}
                   onChange={(e) => {
                     handleChange(e, e.target.value);

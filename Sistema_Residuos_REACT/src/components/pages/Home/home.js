@@ -224,11 +224,11 @@ const Home = () => {
                 <ul className="list-unstyled">
                   <li className="py-1">
                     <FontAwesomeIcon icon={faAddressCard} />
-                    &nbsp;Rua Goiás 427 - Morada do Contorno
+                    &nbsp;Rua Baker, 221B - Londres
                   </li>
                   <li className="py-1">
                     <FontAwesomeIcon icon={faPhone} />
-                    &nbsp;+55 (24) 99879-2952
+                    &nbsp;+555 (555) 5555-4444
                   </li>
                   <li className="py-1">
                     <FontAwesomeIcon icon={faEnvelope} />
