@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import {
   GetPontoColeta,
   DeletePontoColeta,
+  PutPontoColeta,
+  PostPontoColeta
 } from "../../../services/servicePontoColeta";
 import "./mapa.css";
 import Table from "../../commons/table/table";
@@ -10,51 +12,101 @@ import axios from "axios";
 const Mapa = () => {
   const mapRef = useRef(null);
   const [alterar, setAlterar] = useState(false);
-  const [pontocoleta, setPontoCOleta] = useState({ Latitude: "", longitude: "" });
+  const [pontocoleta, setPontoCOleta] = useState({
+    Latitude: "",
+    longitude: "",
+  });
   const [listaMap, setListaMap] = useState([]);
   const [salvou, setSalvou] = useState(false);
   const [habilitar, setHabilitar] = useState(false);
   const [textoBotao, setTextoBotao] = useState("Salvar");
 
   const columns = [
-    { name: "Latitude", columnType: "decimal" },
-    { name: "Longitude", columnType: "decimal" },
+    { name: "latitude", columnType: "texto" },
+    { name: "longitude", columnType: "texto" },
     { name: "Ação", columnType: "botao" },
   ];
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await GetPontoColeta();
+        console.log("Dados carregados:", data);
+        setListaMap(data);
+      } catch (error) {
+        console.error("Erro ao carregar dados:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const handleChange = (e, value) => {
+    const { id } = e.target;
+    setPontoCOleta((prevState) => ({
+      ...prevState,
+      [id]: value,
+    }));
+  };
+
+  const handleSalvar = async () => {
+    try {
+      if (alterar) {
+        await PutPontoColeta(pontocoleta);
+      } else {
+        await PostPontoColeta(pontocoleta);
+      }
+      setSalvou(true);
+    } catch (error) {
+      console.error("Erro ao salvar ponto de coleta:", error);
+    }
+  };
+
   const dataSource =
     listaMap &&
-    listaMap.map((item) => [
-      { name: item.lat },
-      { name: item.long },
-      {
-        botoes: [
-          {
-            botao: (
-              <button
-                onClick={() => CarregarPontoColeta(item)}
-                style={{ marginLeft: "5px" }}
-                className="btn-sm btn-primary"
-                type="button"
-              >
-                Editar
-              </button>
-            ),
-          },
-          {
-            botao: (
-              <button
-                onClick={() => ExluirPontoDeColeta(item.calendarioColetaId)}
-                className="btn btn-sm btn-danger"
-                type="button"
-              >
-                Excluir
-              </button>
-            ),
-          },
-        ],
-      },
-    ]);
+    listaMap.map((item, index) => {
+      console.log("Item no DataSource:", item); // Verifique o conteúdo do item
+      return [
+        { name: item.lat || "N/A" }, // Certifique-se que está correto
+        { name: item.long || "N/A" }, // Certifique-se que está correto
+        {
+          botoes: [
+            {
+              botao: (
+                <button
+                  onClick={() => CarregarPontoColeta(item)}
+                  style={{ marginLeft: "5px" }}
+                  className="btn-sm btn-primary"
+                  type="button"
+                >
+                  Editar
+                </button>
+              ),
+            },
+            {
+              botao: (
+                <button
+                  onClick={() => ExluirPontoDeColeta(item.calendarioColetaId)}
+                  className="btn btn-sm btn-danger"
+                  type="button"
+                >
+                  Excluir
+                </button>
+              ),
+            },
+            {
+              botao: (
+                <button
+                  onClick={() => console.log("Carregar ponto de coleta", item)}
+                >
+                  Carregar
+                </button>
+              ),
+            },
+          ],
+        },
+      ];
+    });
 
   const ExluirPontoDeColeta = (id) => {
     DeletePontoColeta(id).then((res) => {
@@ -66,25 +118,19 @@ const Mapa = () => {
   const CarregarPontoColeta = (pontocoleta) => {
     setPontoCOleta(pontocoleta);
     setAlterar(true);
+    setTextoBotao("Atualizar");
   };
 
-  const handleChange = (e, value) => {
-    const { id } = e.target;
-    setPontoCOleta((prevState) => ({
-      ...prevState,
-      [id]: value,
-    }));
-  };
-
-  const handleSalvar = () => {
-    // Lógica para salvar o ponto de coleta
-    setSalvou(true);
-  };
+  // const handleSalvar = () => {
+  //   // Lógica para salvar o ponto de coleta
+  //   setSalvou(true);
+  // };
 
   const NovoCalendario = () => {
     setPontoCOleta({ Latitude: "", longitude: "" });
     setTextoBotao("Salvar");
     setHabilitar(false);
+    setAlterar(false);
   };
 
   useEffect(() => {
@@ -104,9 +150,10 @@ const Mapa = () => {
       .then((res) => {
         if (res.data && Array.isArray(res.data)) {
           const dados = res.data.map((item) => ({
-            lat: item.Latitude,
-            long: item.longitude,
+            lat: parseFloat(item.latitude),
+            long: parseFloat(item.longitude),
           }));
+          console.log("Dados processados:", dados);
           setListaMap(dados);
         } else {
           console.error("Dados Inválidos recebidos da API:", res.data);
@@ -189,9 +236,9 @@ const Mapa = () => {
               <input
                 readOnly={habilitar}
                 type="text"
-                id="Latitude"
+                id="latitude"
                 step="1"
-                value={pontocoleta.Latitude || ""}
+                value={pontocoleta.latitude || ""}
                 onChange={(e) => {
                   handleChange(e, e.target.value);
                 }}
@@ -205,7 +252,7 @@ const Mapa = () => {
               <input
                 readOnly={habilitar}
                 type="text"
-                id="Longitude"
+                id="longitude"
                 value={pontocoleta.longitude || ""}
                 onChange={(e) => {
                   handleChange(e, e.target.value);
@@ -229,6 +276,7 @@ const Mapa = () => {
         </div>
 
         <Table
+          key={dataSource.length}
           dados={dataSource}
           columns={columns}
           className="table table-striped"
@@ -239,3 +287,5 @@ const Mapa = () => {
 };
 
 export default Mapa;
+
+

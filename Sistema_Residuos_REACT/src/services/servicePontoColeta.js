@@ -9,11 +9,11 @@ export async function GetPontoColetaById(id){
 }
 
 export async function PostPontoColeta(pontocoleta){
-    return await Api.post('/pontocoleta/postpontocoleta', pontocoleta);
+    return await Api.post('/pontoscoleta/postpontoscoleta', pontocoleta);
 }
 
 export async function PutPontoColeta(pontocoleta){
-    return await Api.put('/pontocoleta/putpontocoleta', pontocoleta);
+    return await Api.put('/pontoscoleta/putpontoscoleta', pontocoleta);
 }
 
 export async function DeletePontoColeta(id){
