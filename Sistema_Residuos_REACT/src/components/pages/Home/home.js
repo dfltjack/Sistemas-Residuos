@@ -56,7 +56,14 @@ const Home = () => {
                 src="/assets/cadastroCasa.png"
                 alt="Imagem Cadastro"
                 className="mr-3"
-                style={{ width: "150px", height: "150px" }}
+                style={{
+                  width: "100%",           // Faz a imagem ocupar 100% da largura do card
+                  height: "auto",          // Mantém a proporção da altura com base na largura
+                  borderRadius: "10px",
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+                  objectFit: "cover",      // Garante que a imagem cubra bem o espaço sem distorção
+                }}
+                // style={{ width: "150px", height: "150px" }}
               />
               <Card className="card-fixed-height flex-grow-1">
                 <Card.Body>
@@ -76,7 +83,14 @@ const Home = () => {
                 src="/assets/calendario.jpg"
                 alt="Imagem Calendário"
                 className="mr-3"
-                style={{ width: "150px", height: "150px" }}
+                style={{
+                  width: "100%",           // Faz a imagem ocupar 100% da largura do card
+                  height: "auto",          // Mantém a proporção da altura com base na largura
+                  borderRadius: "10px",
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+                  objectFit: "cover",      // Garante que a imagem cubra bem o espaço sem distorção
+                }}
+                // style={{ width: "150px", height: "150px" }}
               />
               <Card className="card-fixed-height flex-grow-1">
                 <Card.Body>
@@ -96,7 +110,14 @@ const Home = () => {
                 src="/assets/mapa.jpg"
                 alt="Imagem 3"
                 className="mr-3"
-                style={{ width: "150px", height: "150px" }}
+                style={{
+                  width: "100%",           // Faz a imagem ocupar 100% da largura do card
+                  height: "auto",          // Mantém a proporção da altura com base na largura
+                  borderRadius: "10px",
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
+                  objectFit: "cover",      // Garante que a imagem cubra bem o espaço sem distorção
+                }}
+                // style={{ width: "150px", height: "150px" }}
               />
               <Card className="card-fixed-height flex-grow-1">
                 <Card.Body>

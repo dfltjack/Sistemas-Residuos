@@ -227,7 +227,7 @@ const Mapa = () => {
         {/* O mapa será renderizado aqui */}
       </div>
 
-      <div className="table-container">
+      <div className="table-container1">
         <h2 style={{ textAlign: "center" }}>Cadastro de pontos de Coleta</h2>
         <div style={{ display: "flex" }}>
           <div style={{ padding: "10px" }} className="col-md">

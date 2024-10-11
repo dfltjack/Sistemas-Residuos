@@ -1,0 +1,224 @@
+/* home.css */
+
+/* Estilização para a navbar */
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Estilização para os cards */
+.card-fixed-height {
+    height: auto; /* Defina a altura desejada */
+    max-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-left: -9rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* .footer-container {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+} */
+
+/* Estilização para o footer */
+.footer-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: gray;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.footer-container.visible {
+    display: flex; /* Exibir quando a classe 'visible' for adicionada */
+    opacity: 1;
+}
+
+.footer-container h5, .footer-container ul {
+    color: black;
+}
+
+.copyright {
+    text-align: left;
+    color: black;
+}
+
+/* .footer-container a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-container a:hover {
+    text-decoration: underline;
+} */
+
+/* Estilização para o texto */
+.text {
+    text-align: justify;
+    font-size: large;
+    margin: 10px;   
+    border-radius: 2%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 8rem;
+    font-size: 20px;
+}
+
+/* Estilização para os títulos */
+.h3 {
+    text-align: center;
+    font-size: large;
+}
+
+/* Estilização para colunas */
+.col-md-14 {
+    flex: 0 0 auto;
+    width: 116.666667%;
+}
+
+.col-md-16 {
+    flex: 0 0 auto;
+    width: 133.333333%;
+}
+
+.col-md-18 {
+    flex: 0 0 auto;
+    width: 150%;
+}
+
+/* Estilização para o container principal */
+.container-fluid1 {
+    padding: 10px;
+    background-color: 0;
+    border-radius: 0%;
+    box-shadow: 0;
+    margin-left: -10rem;
+}
+
+/* Estilização para os botões */
+button {
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+button:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
+/* Estilização para as imagens */
+img {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: -5px;
+}
+
+/* Estilização para o background */
+.background-home {
+    background: url('../../../../public/assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1; /* Colocamos o background atrás do conteúdo */
+  }
+  
+  /* Outros ajustes */
+  .container-fluid1 {
+    z-index: 1; /* Conteúdo acima do background */
+  }
+
+/* .navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.card-fixed-height {
+   
+    max-height: 100vh;
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-container{
+    position: fixed;
+    bottom: 0;
+    left: 0;    
+    height: auto;    
+    width: 220vh;
+    max-width: 220;
+    display: flex;
+    flex-direction: row;
+    background-color: gray;     
+}
+
+.copyright{
+    position: fixed;
+    bottom: 0;
+    left: 147vh;    
+    height: auto;    
+    width: 100vh;
+    max-width: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-color: gray;     
+}
+
+.text{
+    text-align: justify;
+    font-size: large;
+    margin: 10px;
+    border-radius: 2%;
+    padding: 10px;
+    background-color: rgb(238, 226, 226);
+}
+
+.h3{
+    text-align: center;
+    font-size: large;
+}
+
+.col-md-14 {
+    flex: 0 0 auto;
+    width: 116.666667%;
+}
+
+.col-md-16 {
+    flex: 0 0 auto;
+    width: 133.333333%;
+}
+
+.col-md-18 {
+    flex: 0 0 auto;
+    width: 150%;
+} */

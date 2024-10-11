@@ -6,6 +6,37 @@
 }
 
 .legend {
+    width: 70%;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-right: 1px solid #ddd;
+    margin-left: -184px;
+}
+
+.map-container {
+    width: 200%;
+    height: 95%;
+}
+
+/* Estilos da tabela de cadastro */
+.table-container1 {
+    width: 43%; /* Define a largura da tabela */
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-right: -180px
+}
+
+/* .containermap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 95vh;
+}
+
+.legend {
     width: 25%;
     padding: 20px;
     background-color: #f8f8f8;
@@ -17,12 +48,12 @@
     height: 95%;
 }
 
-/* Estilos da tabela de cadastro */
+
 .table-container {
-    width: 66%; /* Define a largura da tabela */
+    width: 66%; 
     background-color: #2e2e2e;
     color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
+} */

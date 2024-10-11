@@ -1,5 +1,3 @@
-/* home.css */
-
 /* Estilização para a navbar */
 .navbar {
     width: 100%;
@@ -7,218 +5,221 @@
     top: 0;
     left: 0;
     z-index: 1000;
+    background: linear-gradient(90deg, rgba(19, 216, 12, 0.582), rgba(3, 163, 38, 0.836)); /* Gradiente vibrante */
+    padding: 10px 20px; /* Reduzido para ficar mais proporcional */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: #000000; /* Cor mais escura ao rolar */
+    padding: 8px 18px; /* Padding ainda menor ao rolar */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilização para os cards */
 .card-fixed-height {
-    height: auto; /* Defina a altura desejada */
-    max-height: 100vh;
+    max-height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 20px;
-    margin-left: -9rem;
     background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    padding: 15px;
 }
 
-
-/* .footer-container {
-    background-color: #343a40;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-} */
+.card-fixed-height:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #f8f8f8;
+}
 
 /* Estilização para o footer */
 .footer-container {
-    position: fixed;
+    position: relative; /* Alterado para posição relativa para não fixar no topo da página */
     bottom: 0;
     left: 0;
-    height: auto;
     width: 100%;
     display: flex;
-    flex-direction: row;
-    background-color: gray;
-    padding: 10px;
     justify-content: space-between;
     align-items: center;
-    transition: opacity 0.3s ease;
-    opacity: 0;
+    background-color: #2C6B2F; /* Cor mais relacionada à sustentabilidade */
+    padding: 15px 30px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    opacity: 1; /* Corrigido de 10 para 1, garantindo que fique totalmente visível */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.footer-container.visible {
-    display: flex; /* Exibir quando a classe 'visible' for adicionada */
-    opacity: 1;
+/* Ajustes de texto dentro do footer */
+.footer-container h5, .footer-container ul {
+    color: #ffffff;
+    font-size: 14px; /* Tamanho um pouco maior para melhor leitura */
+    margin: 0; /* Removido espaçamento externo desnecessário */
+}
+
+/* Copyright */
+.copyright {
+    text-align: left;
+    color: #bbbbbb;
+    font-size: 12px;
+}
+
+/* Links no footer */
+.footer-container a {
+    color: linear-gradient(90deg, rgba(19, 216, 12, 0.582), rgba(3, 163, 38, 0.836));;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-container a:hover {
+    color: linear-gradient(90deg, rgba(19, 216, 12, 0.582), rgba(3, 163, 38, 0.836)); /* Cor de destaque no hover para manter a harmonia */
+    text-decoration: underline;
+}
+
+/* Responsividade: ajuste para footer ficar no fim da página */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-fluid1 {
+    flex-grow: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+}
+
+.footer-container {
+    position: fixed; /* Faz com que o footer vá para o final da página */
+    margin-top: auto; /* Faz o footer ficar na parte inferior */
 }
 
 .footer-container h5, .footer-container ul {
-    color: black;
+    color: #ffffff;
+    font-size: 12px; /* Tamanho mais ajustado */
 }
 
 .copyright {
     text-align: left;
-    color: black;
+    color: #bbbbbb; /* Tom mais suave */
+    font-size: 12px;
 }
 
-/* .footer-container a {
+.footer-container a {
     color: #ffffff;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .footer-container a:hover {
+    color: #ccccff;
     text-decoration: underline;
-} */
+}
 
 /* Estilização para o texto */
 .text {
     text-align: justify;
-    font-size: large;
-    margin: 10px;   
-    border-radius: 2%;
+    font-size: 18px;
+    margin: 15px;   
+    border-radius: 10px;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-left: 8rem;
-    font-size: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text:hover {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Estilização para os títulos */
 .h3 {
     text-align: center;
-    font-size: large;
+    font-size: 26px;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 1px; /* Melhor espaçamento das letras */
 }
 
 /* Estilização para colunas */
 .col-md-14 {
     flex: 0 0 auto;
-    width: 116.666667%;
+    width: 100%; /* Ajuste para que a largura das colunas não ultrapasse o limite */
 }
 
 .col-md-16 {
     flex: 0 0 auto;
-    width: 133.333333%;
+    width: 100%; /* Mantém o conteúdo dentro do grid */
 }
 
 .col-md-18 {
     flex: 0 0 auto;
-    width: 150%;
+    width: 100%; /* Ajuste para melhor proporção */
 }
 
 /* Estilização para o container principal */
 .container-fluid1 {
-    padding: 10px;
-    background-color: 0;
-    border-radius: 0%;
-    box-shadow: 0;
-    margin-left: -10rem;
+    padding: 20px 15px;
+    background-color: #f8f9fa; /* Cor de fundo suave */
+    border-radius: 12px;
+    margin-left: 0; /* Removido deslocamento para centralizar o conteúdo */
+    margin-right: auto;
+    width: 100%;
+    max-width: 1200px; /* Limitar a largura máxima do container */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Sombra mais suave */
 }
 
 /* Estilização para os botões */
 button {
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    background-color: #007bff;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #1eff00d5;
     color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #00b318d7;
+    transform: scale(1.05); /* Aumenta ligeiramente no hover */
     color: #ffffff;
 }
 
 /* Estilização para as imagens */
 img {
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-left: -5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-left: 0; /* Corrigido o deslocamento da imagem */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* As imagens agora preenchem o espaço disponível */
+    height: auto;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilização para o background */
 .background-home {
-    background: url('../../../../public/assets/background.jpg') no-repeat center center fixed;
+    background: url('../../../../public/assets/background.1.jpg') no-repeat center center fixed;
     background-size: cover;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: 1; /* Colocamos o background atrás do conteúdo */
-  }
-  
-  /* Outros ajustes */
-  .container-fluid1 {
-    z-index: 1; /* Conteúdo acima do background */
-  }
-
-/* .navbar {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+    z-index: 1;
+    filter: brightness(0.9); /* Efeito de escurecimento */
 }
 
-.card-fixed-height {
-   
-    max-height: 100vh;
-    width: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+/* Outros ajustes */
+.container-fluid1 {
+    z-index: 1;
 }
-
-.footer-container{
-    position: fixed;
-    bottom: 0;
-    left: 0;    
-    height: auto;    
-    width: 220vh;
-    max-width: 220;
-    display: flex;
-    flex-direction: row;
-    background-color: gray;     
-}
-
-.copyright{
-    position: fixed;
-    bottom: 0;
-    left: 147vh;    
-    height: auto;    
-    width: 100vh;
-    max-width: 100vh;
-    display: flex;
-    flex-direction: row;
-    background-color: gray;     
-}
-
-.text{
-    text-align: justify;
-    font-size: large;
-    margin: 10px;
-    border-radius: 2%;
-    padding: 10px;
-    background-color: rgb(238, 226, 226);
-}
-
-.h3{
-    text-align: center;
-    font-size: large;
-}
-
-.col-md-14 {
-    flex: 0 0 auto;
-    width: 116.666667%;
-}
-
-.col-md-16 {
-    flex: 0 0 auto;
-    width: 133.333333%;
-}
-
-.col-md-18 {
-    flex: 0 0 auto;
-    width: 150%;
-} */
