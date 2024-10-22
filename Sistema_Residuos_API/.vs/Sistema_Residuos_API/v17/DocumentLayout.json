@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F14A7DD3-8834-4706-B48B-F2471F9B16FB}|Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj|c:\\users\\bejac\\desktop\\sistemas residuos\\sistema_residuos_api\\sistema_residuos_model\\viewmodel\\tiporesiduovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F14A7DD3-8834-4706-B48B-F2471F9B16FB}|Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj|solutionrelative:sistema_residuos_model\\viewmodel\\tiporesiduovm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F14A7DD3-8834-4706-B48B-F2471F9B16FB}|Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj|c:\\users\\bejac\\desktop\\sistemas residuos\\sistema_residuos_api\\sistema_residuos_model\\viewmodel\\pontocoletavm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F14A7DD3-8834-4706-B48B-F2471F9B16FB}|Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj|solutionrelative:sistema_residuos_model\\viewmodel\\pontocoletavm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{978DF51C-239C-4859-83F3-87213555F507}|Sistema_Residuos_API\\Sistema_Residuos_API.csproj|c:\\users\\bejac\\desktop\\sistemas residuos\\sistema_residuos_api\\sistema_residuos_api\\controllers\\pontoscoletacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{978DF51C-239C-4859-83F3-87213555F507}|Sistema_Residuos_API\\Sistema_Residuos_API.csproj|solutionrelative:sistema_residuos_api\\controllers\\pontoscoletacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F14A7DD3-8834-4706-B48B-F2471F9B16FB}|Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj|c:\\users\\bejac\\desktop\\sistemas residuos\\sistema_residuos_api\\sistema_residuos_model\\services\\servicepontoscoleta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F14A7DD3-8834-4706-B48B-F2471F9B16FB}|Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj|solutionrelative:sistema_residuos_model\\services\\servicepontoscoleta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F14A7DD3-8834-4706-B48B-F2471F9B16FB}|Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj|c:\\users\\bejac\\desktop\\sistemas residuos\\sistema_residuos_api\\sistema_residuos_model\\partials\\tiporesiduo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F14A7DD3-8834-4706-B48B-F2471F9B16FB}|Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj|solutionrelative:sistema_residuos_model\\partials\\tiporesiduo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F14A7DD3-8834-4706-B48B-F2471F9B16FB}|Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj|c:\\users\\bejac\\desktop\\sistemas residuos\\sistema_residuos_api\\sistema_residuos_model\\models\\pontoscoletum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F14A7DD3-8834-4706-B48B-F2471F9B16FB}|Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj|solutionrelative:sistema_residuos_model\\models\\pontoscoletum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{978DF51C-239C-4859-83F3-87213555F507}|Sistema_Residuos_API\\Sistema_Residuos_API.csproj|c:\\users\\bejac\\desktop\\sistemas residuos\\sistema_residuos_api\\sistema_residuos_api\\controllers\\pontoscoletacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{978DF51C-239C-4859-83F3-87213555F507}|Sistema_Residuos_API\\Sistema_Residuos_API.csproj|solutionrelative:sistema_residuos_api\\controllers\\pontoscoletacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F14A7DD3-8834-4706-B48B-F2471F9B16FB}|Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj|c:\\users\\bejac\\desktop\\sistemas residuos\\sistema_residuos_api\\sistema_residuos_model\\viewmodel\\pontocoletavm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F14A7DD3-8834-4706-B48B-F2471F9B16FB}|Sistema_Residuos_MODEL\\Sistema_Residuos_MODEL.csproj|solutionrelative:sistema_residuos_model\\viewmodel\\pontocoletavm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 215,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,78 +58,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TipoResiduoVM.cs",
-              "DocumentMoniker": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\ViewModel\\TipoResiduoVM.cs",
-              "RelativeDocumentMoniker": "Sistema_Residuos_MODEL\\ViewModel\\TipoResiduoVM.cs",
-              "ToolTip": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\ViewModel\\TipoResiduoVM.cs",
-              "RelativeToolTip": "Sistema_Residuos_MODEL\\ViewModel\\TipoResiduoVM.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAMwA8AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T11:31:52.131Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TipoResiduo.cs",
-              "DocumentMoniker": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\Partials\\TipoResiduo.cs",
-              "RelativeDocumentMoniker": "Sistema_Residuos_MODEL\\Partials\\TipoResiduo.cs",
-              "ToolTip": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\Partials\\TipoResiduo.cs",
-              "RelativeToolTip": "Sistema_Residuos_MODEL\\Partials\\TipoResiduo.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAMwBAAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T11:31:19.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PontosColetum.cs",
-              "DocumentMoniker": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\Models\\PontosColetum.cs",
-              "RelativeDocumentMoniker": "Sistema_Residuos_MODEL\\Models\\PontosColetum.cs",
-              "ToolTip": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\Models\\PontosColetum.cs",
-              "RelativeToolTip": "Sistema_Residuos_MODEL\\Models\\PontosColetum.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T11:31:05.176Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ServicePontosColeta.cs",
               "DocumentMoniker": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\Services\\ServicePontosColeta.cs",
               "RelativeDocumentMoniker": "Sistema_Residuos_MODEL\\Services\\ServicePontosColeta.cs",
               "ToolTip": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\Services\\ServicePontosColeta.cs",
               "RelativeToolTip": "Sistema_Residuos_MODEL\\Services\\ServicePontosColeta.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAtwBcAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAArwD4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-22T11:27:45.108Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PontoColetaVM.cs",
               "DocumentMoniker": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\ViewModel\\PontoColetaVM.cs",
               "RelativeDocumentMoniker": "Sistema_Residuos_MODEL\\ViewModel\\PontoColetaVM.cs",
               "ToolTip": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_MODEL\\ViewModel\\PontoColetaVM.cs",
               "RelativeToolTip": "Sistema_Residuos_MODEL\\ViewModel\\PontoColetaVM.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAgwAsAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwCcAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-22T11:27:13.091Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "PontosColetaController.cs",
               "DocumentMoniker": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_API\\Controllers\\PontosColetaController.cs",
               "RelativeDocumentMoniker": "Sistema_Residuos_API\\Controllers\\PontosColetaController.cs",
               "ToolTip": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_API\\Controllers\\PontosColetaController.cs",
               "RelativeToolTip": "Sistema_Residuos_API\\Controllers\\PontosColetaController.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAjwA8AAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAewDUAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-22T11:02:44.373Z",
               "EditorCaption": ""

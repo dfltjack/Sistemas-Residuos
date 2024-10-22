@@ -14,7 +14,7 @@ namespace Sistema_Residuos_MODEL.Partials
         public class MD_TipoResiduo
         {
             [Display(Name = "Código do Tipo de Resíduo")]
-            public int? TipoResiduoId { get; set; }
+            public int TipoResiduoId { get; set; }
             [Display(Name = "Calendário de Coleta")] 
             public virtual ICollection<CalendarioColetum> CalendarioColeta { get; set; } = new List<CalendarioColetum>();
             [Display(Name = "Pontos de Coleta")]

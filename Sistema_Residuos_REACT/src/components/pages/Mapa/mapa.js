@@ -3,7 +3,7 @@ import {
   GetPontoColeta,
   DeletePontoColeta,
   PutPontoColeta,
-  PostPontoColeta
+  PostPontoColeta,
 } from "../../../services/servicePontoColeta";
 import "./mapa.css";
 import Table from "../../commons/table/table";
@@ -13,8 +13,10 @@ const Mapa = () => {
   const mapRef = useRef(null);
   const [alterar, setAlterar] = useState(false);
   const [pontocoleta, setPontoCOleta] = useState({
+    pontoColetaId: 0,
     latitude: "",
     longitude: "",
+    tipoResiduoId:0,
   });
   const [listaMap, setListaMap] = useState([]);
   const [salvou, setSalvou] = useState(false);
@@ -30,9 +32,9 @@ const Mapa = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await GetPontoColeta();
-        console.log("Dados carregados:", data);
-        setListaMap(data);
+        const response = await GetPontoColeta();
+        console.log("Dados carregados:", response.data);
+        setListaMap(response.data);
       } catch (error) {
         console.error("Erro ao carregar dados:", error);
       }
@@ -45,7 +47,7 @@ const Mapa = () => {
     const { id, value } = e.target;
     setPontoCOleta((prevState) => ({
       ...prevState,
-      [id]: value,
+      [id.toLowerCase()]: value,
     }));
   };
 
@@ -58,20 +60,61 @@ const Mapa = () => {
       } else {
         response = await PostPontoColeta(pontocoleta);
       }
-      console.log("Resposta do servidor:", response);
+      console.log("Resposta do Servidor:", response);
       setSalvou(true);
     } catch (error) {
       console.error("Erro ao salvar ponto de coleta:", error);
     }
   };
 
-  const dataSource =
-    listaMap &&
-    listaMap.map((item, index) => {
-      console.log("Item no DataSource:", item); 
+  // const dataSource = listaMap.map((item, index) => ({
+    //   latitude: item.lat || "N/A",
+    //   longitude: item.long || "N/A",
+    //   acao: {
+    //     botoes: [
+    //       {
+    //         botao: (
+    //           <button
+    //             onClick={() => CarregarPontoColeta(item)}
+    //             style={{ marginLeft: "5px" }}
+    //             className="btn-sm btn-primary"
+    //             type="button"
+    //           >
+    //             Editar
+    //           </button>
+    //         ),
+    //       },
+    //       {
+    //         botao: (
+    //           <button
+    //             onClick={() => ExcluirPontoDeColeta(item.pontoColetaId)}
+    //             className="btn btn-sm btn-danger"
+    //             type="button"
+    //           >
+    //             Excluir
+    //           </button>
+    //         ),
+    //       },
+    //     ],
+    //   },
+    // }));
+    
+    // const CarregarPontoColeta = (pontocoleta) => {
+    //   setPontoCOleta({
+    //     pontoColetaId: pontocoleta.pontoColetaId,
+    //     latitude: pontocoleta.lat,
+    //     longitude: pontocoleta.long,
+    //     tipoResiduoId: pontocoleta.tipoResiduoId,
+    //   });
+    //   setAlterar(true);
+    //   setTextoBotao("Atualizar");
+    // };
+
+  const dataSource = Array.isArray(listaMap) ? listaMap.map((item) => {
+      console.log("Item no DataSource:", item);
       return [
-        { name: item.lat || "N/A" }, 
-        { name: item.long || "N/A" }, 
+        { name: item.lat || "N/A" },
+        { name: item.long || "N/A" },
         {
           botoes: [
             {
@@ -89,7 +132,7 @@ const Mapa = () => {
             {
               botao: (
                 <button
-                  onClick={() => ExluirPontoDeColeta(item.calendarioColetaId)}
+                  onClick={() => ExcluirPontoDeColeta(item.pontoColetaId)}
                   className="btn btn-sm btn-danger"
                   type="button"
                 >
@@ -97,35 +140,31 @@ const Mapa = () => {
                 </button>
               ),
             },
-            {
-              botao: (
-                <button
-                  onClick={() => console.log("Carregar ponto de coleta", item)}
-                >
-                  Carregar
-                </button>
-              ),
-            },
           ],
         },
       ];
-    });
-
-  const ExluirPontoDeColeta = (id) => {
-    DeletePontoColeta(id).then((res) => {
-      console.log(res.data);
-    });
-    setSalvou(true);
-  };
+    }) : [];
 
   const CarregarPontoColeta = (pontocoleta) => {
-    setPontoCOleta(pontocoleta);
+    setPontoCOleta({
+      pontoColetaId: pontocoleta.pontoColetaId,
+      latitude: pontocoleta.lat.toString(),
+      longitude: pontocoleta.long.toString(),
+      tipoResiduoId: pontocoleta.tipoResiduoId,
+    });
     setAlterar(true);
     setTextoBotao("Atualizar");
   };
 
+  const ExcluirPontoDeColeta = (id) => {
+    DeletePontoColeta(id).then((res) => {
+      console.log(res.data);
+    });
+    setSalvou(true);
+  };  
+
   const NovoCalendario = () => {
-    setPontoCOleta({ latitude: "", longitude: "" });
+    setPontoCOleta({ pontoColetaId: 0, latitude: "", longitude: "", tipoResiduoId: 0 });
     setTextoBotao("Salvar");
     setHabilitar(false);
     setAlterar(false);
@@ -148,8 +187,10 @@ const Mapa = () => {
       .then((res) => {
         if (res.data && Array.isArray(res.data)) {
           const dados = res.data.map((item) => ({
+            pontoColetaId: item.pontoColetaId,
             lat: parseFloat(item.latitude),
             long: parseFloat(item.longitude),
+            tipoResiduoId: item.tipoResiduoId,
           }));
           console.log("Dados processados:", dados);
           setListaMap(dados);
@@ -167,10 +208,17 @@ const Mapa = () => {
   useEffect(() => {
     // Load the Google Maps API script
     const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=&libraries=places`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyBFQ9L7_Bi3dkfVy27QzIpA4bzODNT-6rU&libraries=places`;
     script.async = true;
     script.defer = true;
     document.head.appendChild(script);
+
+    const handler = (event) => {
+      console.log("Event:", event.type);
+    };
+
+    document.addEventListener("touchstart", handler, { passive: true });
+    document.addEventListener("touchmove", handler, { passive: true });
 
     script.onload = () => {
       const pontosDeColeta =
@@ -204,6 +252,12 @@ const Mapa = () => {
         });
       });
     };
+
+    // Cleanup event listeners on component unmount
+    return () => {
+      document.removeEventListener("touchstart", handler);
+      document.removeEventListener("touchmove", handler);
+    };
   }, [listaMap]);
 
   return (
@@ -227,7 +281,7 @@ const Mapa = () => {
 
       <div className="table-container1">
         <h2 style={{ textAlign: "center" }}>Cadastro de pontos de Coleta</h2>
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ padding: "10px" }} className="col-md">
             <div className="col-md">
               <label>Latitude:</label>
@@ -244,6 +298,7 @@ const Mapa = () => {
               />
             </div>
           </div>
+
           <div style={{ padding: "10px" }} className="col-md">
             <div className="col-md">
               <label>Longitude: </label>
@@ -285,5 +340,3 @@ const Mapa = () => {
 };
 
 export default Mapa;
-
-
