@@ -13,7 +13,7 @@ public partial class PontosColetum
 
     public string Longitude { get; set; }
 
-    public int TipoResiduoId { get; set; }
+    public int? TipoResiduoId { get; set; }
 
     public virtual TiposResiduo TipoResiduo { get; set; }
 }

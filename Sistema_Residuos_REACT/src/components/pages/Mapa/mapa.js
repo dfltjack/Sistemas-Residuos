@@ -13,7 +13,7 @@ const Mapa = () => {
   const mapRef = useRef(null);
   const [alterar, setAlterar] = useState(false);
   const [pontocoleta, setPontoCOleta] = useState({
-    Latitude: "",
+    latitude: "",
     longitude: "",
   });
   const [listaMap, setListaMap] = useState([]);
@@ -41,8 +41,8 @@ const Mapa = () => {
     fetchData();
   }, []);
 
-  const handleChange = (e, value) => {
-    const { id } = e.target;
+  const handleChange = (e) => {
+    const { id, value } = e.target;
     setPontoCOleta((prevState) => ({
       ...prevState,
       [id]: value,
@@ -51,11 +51,14 @@ const Mapa = () => {
 
   const handleSalvar = async () => {
     try {
+      console.log("Dados a serem enviados:", pontocoleta);
+      let response;
       if (alterar) {
-        await PutPontoColeta(pontocoleta);
+        response = await PutPontoColeta(pontocoleta);
       } else {
-        await PostPontoColeta(pontocoleta);
+        response = await PostPontoColeta(pontocoleta);
       }
+      console.log("Resposta do servidor:", response);
       setSalvou(true);
     } catch (error) {
       console.error("Erro ao salvar ponto de coleta:", error);
@@ -65,10 +68,10 @@ const Mapa = () => {
   const dataSource =
     listaMap &&
     listaMap.map((item, index) => {
-      console.log("Item no DataSource:", item); // Verifique o conteúdo do item
+      console.log("Item no DataSource:", item); 
       return [
-        { name: item.lat || "N/A" }, // Certifique-se que está correto
-        { name: item.long || "N/A" }, // Certifique-se que está correto
+        { name: item.lat || "N/A" }, 
+        { name: item.long || "N/A" }, 
         {
           botoes: [
             {
@@ -121,13 +124,8 @@ const Mapa = () => {
     setTextoBotao("Atualizar");
   };
 
-  // const handleSalvar = () => {
-  //   // Lógica para salvar o ponto de coleta
-  //   setSalvou(true);
-  // };
-
   const NovoCalendario = () => {
-    setPontoCOleta({ Latitude: "", longitude: "" });
+    setPontoCOleta({ latitude: "", longitude: "" });
     setTextoBotao("Salvar");
     setHabilitar(false);
     setAlterar(false);

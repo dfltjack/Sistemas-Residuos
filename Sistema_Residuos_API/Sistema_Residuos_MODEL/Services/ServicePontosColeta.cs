@@ -31,7 +31,7 @@ namespace Sistema_Residuos_MODEL.Services
                     PontoColetaId = pontoColetaVM.PontoColetaId,                   
                     Latitude = pontoColetaVM.Latitude,
                     Longitude = pontoColetaVM.Longitude,
-                    TipoResiduoId = pontoColetaVM.TipoResiduoId
+                    //TipoResiduoId = pontoColetaVM.TipoResiduoId
                 };
 
                 await _oRepositoryPontosColeta.IncluirAsync(pontoColeta);
@@ -54,7 +54,7 @@ namespace Sistema_Residuos_MODEL.Services
                 PontoColetaId = pontoColetaVM.PontoColetaId,
                 Latitude = pontoColetaVM.Latitude,
                 Longitude = pontoColetaVM.Longitude,
-                TipoResiduoId = pontoColetaVM.TipoResiduoId
+                //TipoResiduoId = pontoColetaVM.TipoResiduoId
             };
 
             await _oRepositoryPontosColeta.AlterarAsync(pontoColeta);
