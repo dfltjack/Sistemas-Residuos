@@ -25,5 +25,5 @@ export async function PutPontoColeta(pontocoleta) {
 // }
 
 export async function DeletePontoColeta(id){
-    return Api.delete(`/pontocoleta/deletepontocoleta/${id}`);
+    return Api.delete(`/pontoscoleta/deletepontoscoleta/${id}`);
 }

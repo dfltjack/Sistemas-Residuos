@@ -14,16 +14,19 @@ const Mapa = () => {
   const [alterar, setAlterar] = useState(false);
   const [pontocoleta, setPontoCOleta] = useState({
     pontoColetaId: 0,
+    nome: "",
     latitude: "",
     longitude: "",
     tipoResiduoId:0,
   });
   const [listaMap, setListaMap] = useState([]);
+  const [pontosMapa, setPontosMapa] = useState([]);
   const [salvou, setSalvou] = useState(false);
   const [habilitar, setHabilitar] = useState(false);
   const [textoBotao, setTextoBotao] = useState("Salvar");
 
   const columns = [
+    //{ name: "nome", columnType: "texto"},
     { name: "latitude", columnType: "texto" },
     { name: "longitude", columnType: "texto" },
     { name: "Ação", columnType: "botao" },
@@ -33,7 +36,7 @@ const Mapa = () => {
     const fetchData = async () => {
       try {
         const response = await GetPontoColeta();
-        console.log("Dados carregados:", response.data);
+        //console.log("Dados carregados:", response.data);
         setListaMap(response.data);
       } catch (error) {
         console.error("Erro ao carregar dados:", error);
@@ -111,8 +114,9 @@ const Mapa = () => {
     // };
 
   const dataSource = Array.isArray(listaMap) ? listaMap.map((item) => {
-      console.log("Item no DataSource:", item);
+      // console.log("Item no DataSource:", item);
       return [
+        //{ name: item.nome || "N/A" },
         { name: item.lat || "N/A" },
         { name: item.long || "N/A" },
         {
@@ -148,6 +152,7 @@ const Mapa = () => {
   const CarregarPontoColeta = (pontocoleta) => {
     setPontoCOleta({
       pontoColetaId: pontocoleta.pontoColetaId,
+      nome: pontocoleta.nome,
       latitude: pontocoleta.lat.toString(),
       longitude: pontocoleta.long.toString(),
       tipoResiduoId: pontocoleta.tipoResiduoId,
@@ -164,10 +169,26 @@ const Mapa = () => {
   };  
 
   const NovoCalendario = () => {
-    setPontoCOleta({ pontoColetaId: 0, latitude: "", longitude: "", tipoResiduoId: 0 });
+    setPontoCOleta({ pontoColetaId: 0, nome: "", latitude: "", longitude: "", tipoResiduoId: 0 });
     setTextoBotao("Salvar");
     setHabilitar(false);
     setAlterar(false);
+  };
+
+  const obterEndereco = (lat, lng, callback) => {
+    const geocoder = new window.google.maps.Geocoder();
+    const latlng = {lat, lng};
+    geocoder.geocode({ location: latlng}, (results, status) => {
+      if (status === "OK") {
+        if (results[0]) {
+          callback(results[0].formatted_address);
+        }else{
+          callback("Endereço não encontrado");
+        }
+      }else{
+        callback("Erro ao obter endereço");
+      }
+    });
   };
 
   useEffect(() => {
@@ -188,6 +209,7 @@ const Mapa = () => {
         if (res.data && Array.isArray(res.data)) {
           const dados = res.data.map((item) => ({
             pontoColetaId: item.pontoColetaId,
+            nome: item.nome,
             lat: parseFloat(item.latitude),
             long: parseFloat(item.longitude),
             tipoResiduoId: item.tipoResiduoId,
@@ -206,6 +228,9 @@ const Mapa = () => {
   }, [salvou]);
 
   useEffect(() => {
+    // Limpa o estado pontosMapa antes de adicionar novos pontos
+    setPontosMapa([]);
+
     // Load the Google Maps API script
     const script = document.createElement("script");
     script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyBFQ9L7_Bi3dkfVy27QzIpA4bzODNT-6rU&libraries=places`;
@@ -220,12 +245,13 @@ const Mapa = () => {
     document.addEventListener("touchstart", handler, { passive: true });
     document.addEventListener("touchmove", handler, { passive: true });
 
-    script.onload = () => {
+    script.onload = () => {      
       const pontosDeColeta =
         listaMap &&
         listaMap.map((name) => ({
           lat: name.lat,
           lng: name.long,
+          nome: name.nome,
         }));
 
       // Coordenadas de Resende, RJ
@@ -234,16 +260,22 @@ const Mapa = () => {
       // Inicializa o mapa focado em Resende, RJ
       const map = new window.google.maps.Map(mapRef.current, {
         center: resendeCoords,
-        zoom: 16, // Ajuste o nível de zoom conforme necessário
+        zoom: 16, 
       });
 
-      // Adiciona marcadores para cada ponto de coleta
       pontosDeColeta.forEach((ponto) => {
         const marker = new window.google.maps.Marker({
           position: { lat: ponto.lat, lng: ponto.lng },
           map: map,
-          title: ponto.title,
+          title: ponto.nome,
         });
+
+        obterEndereco(ponto.lat, ponto.lng, (endereco) => {
+          setPontosMapa((prevPontos) => [
+            ...prevPontos,
+            {nome: ponto.nome, lat: ponto.lat, lng: ponto.lng, endereco},
+          ]);
+        });              
 
         // Adiciona evento de clique ao marcador
         marker.addListener("click", () => {
@@ -251,14 +283,14 @@ const Mapa = () => {
           window.open(googleMapsUrl, "_blank");
         });
       });
-    };
+    };    
 
     // Cleanup event listeners on component unmount
     return () => {
       document.removeEventListener("touchstart", handler);
       document.removeEventListener("touchmove", handler);
     };
-  }, [listaMap]);
+  }, [listaMap]); 
 
   return (
     <div className="containermap">
@@ -269,12 +301,29 @@ const Mapa = () => {
           <li>Use o zoom para aproximar ou afastar o mapa.</li>
           <li>Arraste o mapa para navegar pela área.</li>
         </ul>
+
         <p style={{ textAlign: "justify" }}>
-          Atualmente detemos poucos pontos de coleta de resíduos, ao todo são 3
+          Atualmente detemos poucos pontos de coleta de resíduos, ao todo são 6
           pontos que estão ajudando a cidade a desempenhar um papel melhor na
           sociedade, coletando, reciclando e fazendo bom uso dos materiais.
         </p>
+
+        <p style={{ textAlign: "justify" }}>
+          Se você deseja adicionar um novo ponto de coleta, clique no mapa para
+          adicionar um novo marcador e preencha os campos de latitude e
+          longitude.
+        </p>
+
+        <h3>Pontos de Coleta Adicionados</h3>
+        <ul>
+          {pontosMapa.map((ponto, index) => (
+            <li key={index}>
+              {ponto.nome} {ponto.endereco} {habilitar}
+            </li>
+          ))}
+        </ul>         
       </div>
+
       <div ref={mapRef} className="map-container">
         {/* O mapa será renderizado aqui */}
       </div>
@@ -282,6 +331,20 @@ const Mapa = () => {
       <div className="table-container1">
         <h2 style={{ textAlign: "center" }}>Cadastro de pontos de Coleta</h2>
         <div style={{ display: "flex", flexDirection: "column" }}>
+          {/* <div style={{padding: "10px"}} className="col-md">
+            <div className="col-md">
+              <label>Nome:</label>
+              <input
+              readOnly={habilitar}
+              type="text"
+              id="nome"
+              value={pontocoleta.nome || ""}
+              onChange={handleChange}
+              className="form-control"
+              >
+              </input>
+            </div>
+          </div> */}
           <div style={{ padding: "10px" }} className="col-md">
             <div className="col-md">
               <label>Latitude:</label>

@@ -66,8 +66,7 @@
               "RelativeToolTip": "Sistema_Residuos_MODEL\\Services\\ServicePontosColeta.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAArwD4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T11:27:45.108Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-22T11:27:45.108Z"
             },
             {
               "$type": "Document",
@@ -79,8 +78,7 @@
               "RelativeToolTip": "Sistema_Residuos_MODEL\\ViewModel\\PontoColetaVM.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAgwCcAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T11:27:13.091Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-22T11:27:13.091Z"
             },
             {
               "$type": "Document",
@@ -90,7 +88,7 @@
               "RelativeDocumentMoniker": "Sistema_Residuos_API\\Controllers\\PontosColetaController.cs",
               "ToolTip": "C:\\Users\\bejac\\Desktop\\Sistemas Residuos\\Sistema_Residuos_API\\Sistema_Residuos_API\\Controllers\\PontosColetaController.cs",
               "RelativeToolTip": "Sistema_Residuos_API\\Controllers\\PontosColetaController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAewDUAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAWwDUAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-22T11:02:44.373Z",
               "EditorCaption": ""
