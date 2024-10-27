@@ -5,7 +5,7 @@ import Home from '../../pages/Home/home';
 import Cadastro from '../../pages/Cadastro/cadastro';
 import Login from '../../pages/Login/login';
 import Mapa from '../../pages/Mapa/mapa';
-import Calendario from '../../pages/Calendario/calendario';
+import Calendario from '../../pages/CalendarioPath/calendario';
 import Notificacoes from '../../pages/Notificacoes/notificacoes';
 import { FaSignInAlt, FaUserPlus, FaBell, FaSignOutAlt, FaCalendar, FaMap } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

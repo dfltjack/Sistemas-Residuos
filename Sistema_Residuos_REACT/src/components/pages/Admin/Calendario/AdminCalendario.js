@@ -6,10 +6,10 @@ import {
   GetCalendario,
   PostCalendario,
   PutCalendario,
-} from "../../../services/serviceCalendario";
+} from "../../../../services/serviceCalendario";
 import "./calendario.css";
-import Table from "../../commons/table/table";
-import axios from "axios";
+import Table from "../../../commons/table/table";
+import axios from "axios";  
 
 const AdminCalendario = () => {
   const [alterar, setAlterar] = useState(false);

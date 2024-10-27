@@ -4,9 +4,9 @@ import {
   DeletePontoColeta,
   PutPontoColeta,
   PostPontoColeta,
-} from "../../../services/servicePontoColeta";
+} from "../../../../services/servicePontoColeta";
 import "./mapa.css";
-import Table from "../../commons/table/table";
+//import Table from "../../../commons/table/table";
 import axios from "axios";
 
 const Mapa = () => {
@@ -69,49 +69,6 @@ const Mapa = () => {
       console.error("Erro ao salvar ponto de coleta:", error);
     }
   };
-
-  // const dataSource = listaMap.map((item, index) => ({
-    //   latitude: item.lat || "N/A",
-    //   longitude: item.long || "N/A",
-    //   acao: {
-    //     botoes: [
-    //       {
-    //         botao: (
-    //           <button
-    //             onClick={() => CarregarPontoColeta(item)}
-    //             style={{ marginLeft: "5px" }}
-    //             className="btn-sm btn-primary"
-    //             type="button"
-    //           >
-    //             Editar
-    //           </button>
-    //         ),
-    //       },
-    //       {
-    //         botao: (
-    //           <button
-    //             onClick={() => ExcluirPontoDeColeta(item.pontoColetaId)}
-    //             className="btn btn-sm btn-danger"
-    //             type="button"
-    //           >
-    //             Excluir
-    //           </button>
-    //         ),
-    //       },
-    //     ],
-    //   },
-    // }));
-    
-    // const CarregarPontoColeta = (pontocoleta) => {
-    //   setPontoCOleta({
-    //     pontoColetaId: pontocoleta.pontoColetaId,
-    //     latitude: pontocoleta.lat,
-    //     longitude: pontocoleta.long,
-    //     tipoResiduoId: pontocoleta.tipoResiduoId,
-    //   });
-    //   setAlterar(true);
-    //   setTextoBotao("Atualizar");
-    // };
 
   const dataSource = Array.isArray(listaMap) ? listaMap.map((item) => {
       // console.log("Item no DataSource:", item);
@@ -233,7 +190,7 @@ const Mapa = () => {
 
     // Load the Google Maps API script
     const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=&libraries=places`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyBFQ9L7_Bi3dkfVy27QzIpA4bzODNT-6rU&libraries=places`;
     script.async = true;
     script.defer = true;
     document.head.appendChild(script);
@@ -318,7 +275,7 @@ const Mapa = () => {
         <ul>
           {pontosMapa.map((ponto, index) => (
             <li key={index}>
-              {ponto.nome} {ponto.endereco} {habilitar}
+              {ponto.nome} {ponto.endereco} 
             </li>
           ))}
         </ul>         
@@ -326,25 +283,17 @@ const Mapa = () => {
 
       <div ref={mapRef} className="map-container">
         {/* O mapa será renderizado aqui */}
-      </div>
+      </div>      
+    </div>
+  );
+};
 
-      <div className="table-container1">
+export default Mapa;
+
+{/* <div className="table-container1">
         <h2 style={{ textAlign: "center" }}>Cadastro de pontos de Coleta</h2>
         <div style={{ display: "flex", flexDirection: "column" }}>
-          {/* <div style={{padding: "10px"}} className="col-md">
-            <div className="col-md">
-              <label>Nome:</label>
-              <input
-              readOnly={habilitar}
-              type="text"
-              id="nome"
-              value={pontocoleta.nome || ""}
-              onChange={handleChange}
-              className="form-control"
-              >
-              </input>
-            </div>
-          </div> */}
+          {}
           <div style={{ padding: "10px" }} className="col-md">
             <div className="col-md">
               <label>Latitude:</label>
@@ -397,9 +346,4 @@ const Mapa = () => {
           columns={columns}
           className="table table-striped"
         />
-      </div>
-    </div>
-  );
-};
-
-export default Mapa;
+      </div> */}

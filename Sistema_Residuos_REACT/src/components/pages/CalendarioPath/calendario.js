@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import {jwtDecode} from "jwt-decode"; // Importa a função jwtDecode corretamente
-import AdminCalendario from "./AdminCalendario";
-import ClienteCalendario from "./clienteCalendario";
+import AdminCalendario from "../Admin/Calendario/AdminCalendario";
+import ClienteCalendario from "../Cliente/Calendario/clienteCalendario";
 import "./calendario.css";
 
 const Calendario = () => {
