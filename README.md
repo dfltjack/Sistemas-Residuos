@@ -1,7 +1,9 @@
 # Gestão de Resíduos Sólidos: Empresas Parceiras e Oportunidades de Negócio
 
-<img src="![image](https://github.com/user-attachments/assets/2e5df378-ab96-463b-8769-3370028e402b)">Login<img/>
-<img src="![image](https://github.com/user-attachments/assets/f034c3c0-139d-410e-ad5f-f5aedabc4cd7)">Cadastro<img/>
+<img src="https://github.com/user-attachments/assets/2e5df378-ab96-463b-8769-3370028e402b">Login<img/>
+<img src="https://github.com/user-attachments/assets/f034c3c0-139d-410e-ad5f-f5aedabc4cd7">Cadastro<img/>
+![image](https://github.com/user-attachments/assets/f034c3c0-139d-410e-ad5f-f5aedabc4cd7)
+![image](https://github.com/user-attachments/assets/2e5df378-ab96-463b-8769-3370028e402b)
 
 ## Empresas Parceiras
 
