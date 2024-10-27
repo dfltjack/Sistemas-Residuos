@@ -233,7 +233,7 @@ const Mapa = () => {
 
     // Load the Google Maps API script
     const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyBFQ9L7_Bi3dkfVy27QzIpA4bzODNT-6rU&libraries=places`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=&libraries=places`;
     script.async = true;
     script.defer = true;
     document.head.appendChild(script);
