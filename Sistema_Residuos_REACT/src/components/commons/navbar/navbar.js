@@ -89,9 +89,6 @@ const NavBarMain = () => {
         </Container>
       </Navbar>
       
-      <br />
-      <br />
-      
       <Container>
         <Routes>
           <Route path="/" element={<Home />} />

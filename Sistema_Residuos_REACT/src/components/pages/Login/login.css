@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2? family= Noto+Sans:wght@400;600 & display=swap');
 
-
 body{
     margin: 0;
     font-family: sans-serif;
 }
-
 
 .mainlogin {
     width: 110vw;
@@ -15,7 +13,7 @@ body{
     justify-content: center;
     align-items: center;
     margin-left: -44vh;
-    margin-top: -9%;
+    margin-top: -171px
 }
 
 .leftlogin{
