@@ -93,7 +93,7 @@ button {
     font-size: 14px;
 }
 
-button:hover {
+.button:hover {
     background-color: #66bb6a; /* Verde claro no hover */
     transform: scale(1.05);
     color: #ffffff;

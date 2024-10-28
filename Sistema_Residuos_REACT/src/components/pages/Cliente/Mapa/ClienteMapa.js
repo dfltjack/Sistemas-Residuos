@@ -190,7 +190,7 @@ const Mapa = () => {
 
     // Load the Google Maps API script
     const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=&libraries=places`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyBFQ9L7_Bi3dkfVy27QzIpA4bzODNT-6rU&libraries=places`;
     script.async = true;
     script.defer = true;
     document.head.appendChild(script);
@@ -289,61 +289,3 @@ const Mapa = () => {
 };
 
 export default Mapa;
-
-{/* <div className="table-container1">
-        <h2 style={{ textAlign: "center" }}>Cadastro de pontos de Coleta</h2>
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          {}
-          <div style={{ padding: "10px" }} className="col-md">
-            <div className="col-md">
-              <label>Latitude:</label>
-              <input
-                readOnly={habilitar}
-                type="text"
-                id="latitude"
-                step="1"
-                value={pontocoleta.latitude || ""}
-                onChange={(e) => {
-                  handleChange(e, e.target.value);
-                }}
-                className="form-control"
-              />
-            </div>
-          </div>
-
-          <div style={{ padding: "10px" }} className="col-md">
-            <div className="col-md">
-              <label>Longitude: </label>
-              <input
-                readOnly={habilitar}
-                type="text"
-                id="longitude"
-                value={pontocoleta.longitude || ""}
-                onChange={(e) => {
-                  handleChange(e, e.target.value);
-                }}
-                className="form-control"
-              />
-            </div>
-          </div>
-
-          <button onClick={handleSalvar} type="button" className="btn-success">
-            {textoBotao}
-          </button>
-          <button
-            onClick={NovoCalendario}
-            type="button"
-            style={{ marginLeft: "5px" }}
-            className="btn-primary"
-          >
-            Novo
-          </button>
-        </div>
-
-        <Table
-          key={dataSource.length}
-          dados={dataSource}
-          columns={columns}
-          className="table table-striped"
-        />
-      </div> */}

@@ -3,7 +3,7 @@ import axios from "axios";
 import {jwtDecode} from "jwt-decode"; // Importa a função jwtDecode corretamente
 import AdminCalendario from "../Admin/Calendario/AdminCalendario";
 import ClienteCalendario from "../Cliente/Calendario/clienteCalendario";
-import "./calendario.css";
+//import "./calendario.css";
 
 const Calendario = () => {
   const [isAdmin, setIsAdmin] = useState(false); // Estado para verificar se o usuário é admin

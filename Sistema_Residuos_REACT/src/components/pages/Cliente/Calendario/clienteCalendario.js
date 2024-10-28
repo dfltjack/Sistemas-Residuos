@@ -10,6 +10,16 @@ const ClienteCalendario = () => {
   const [value, setValue] = useState(new Date());
 
   useEffect(() => {
+    // Desativa o scroll da página
+    document.body.style.overflow = 'hidden';
+
+    // Limpa o estilo ao desmontar o componente
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
+
+  useEffect(() => {
     const verificarAPI = async () => {
       try {
         const response = await axios.get(

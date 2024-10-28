@@ -190,7 +190,7 @@ const Mapa = () => {
 
     // Load the Google Maps API script
     const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=&libraries=places`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyBFQ9L7_Bi3dkfVy27QzIpA4bzODNT-6rU&libraries=places`;
     script.async = true;
     script.defer = true;
     document.head.appendChild(script);
@@ -287,21 +287,7 @@ const Mapa = () => {
 
       <div className="table-container1">
         <h2 style={{ textAlign: "center" }}>Cadastro de pontos de Coleta</h2>
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          {/* <div style={{padding: "10px"}} className="col-md">
-            <div className="col-md">
-              <label>Nome:</label>
-              <input
-              readOnly={habilitar}
-              type="text"
-              id="nome"
-              value={pontocoleta.nome || ""}
-              onChange={handleChange}
-              className="form-control"
-              >
-              </input>
-            </div>
-          </div> */}
+        <div style={{ display: "flex", flexDirection: "column" }}>          
           <div style={{ padding: "10px" }} className="col-md">
             <div className="col-md">
               <label>Latitude:</label>

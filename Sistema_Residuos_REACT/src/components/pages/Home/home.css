@@ -1,3 +1,11 @@
+.text {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: justify;
+    margin-left: 7%;
+    margin-right: -36%
+}
+
 .navbar.scrolled {
     background: #000000; /* Cor mais escura ao rolar */
     padding: 8px 18px; /* Padding ainda menor ao rolar */
@@ -11,7 +19,7 @@
   top: 0;
   left: 0;
   overflow-y: hidden;
-  margin-top: 57px;
+  margin-top: 56px;
   padding-top: 0px;
 }
 
@@ -70,7 +78,7 @@
 .footer-container {
     position: fixed; /* Faz com que o footer vá para o final da página */
     margin-top: auto; /* Faz o footer ficar na parte inferior */
-    margin-left: 34vh;
+    margin-left: 326px;
     margin-right: 100%;
 }
 
@@ -125,16 +133,8 @@
     margin-left: 70px;
 }
 
-button:hover {
+.button:hover {
     background-color: #00b318d7;
     transform: scale(1.05); /* Aumenta ligeiramente no hover */
     color: #ffffff;
-}
-
-p {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    text-align: justify;
-    margin-left: 20%;
-    margin-right: -32%
 }

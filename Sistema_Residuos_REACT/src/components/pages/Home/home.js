@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row, Button, Col, Navbar } from "react-bootstrap";
+import { Container, Row, Button, Col} from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAddressCard, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -129,7 +129,7 @@ const Home = () => {
              <div className="container-fluid1">
                <div className="row">
                  <h3 className="text">
-                 <p>
+                 <p className="text">
                    Nosso objetivo é desenvolver um sistema integrado que facilite
                    a gestão de resíduos sólidos na comunidade, promovendo a
                    reciclagem e a correta destinação do lixo. Queremos criar um
@@ -262,29 +262,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </footer>
-      {/* <div className="footer-container">
-        <footer className="bg-success text-white mt-4 p-3">        
-          <div className="row">
-            <div className="col-12 col-md-6">
-              <h5>Contato</h5>
-              <ul className="list-unstyled">
-                <li>
-                  <a href="mailto:SistemaResiduos@hotmail.com" className="text-white">
-                    SistemaResiduos@hotmail.com
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="col-12 col-md-6 text-right">
-              <p className="mb-0">
-                © 2024 - Sistema de Gestão de Resíduos Sólidos para Comunidades
-              </p>
-            </div>
-          </div>        
-      </footer>
-      </div> */}
+        </footer>     
     </>
   );
 };
