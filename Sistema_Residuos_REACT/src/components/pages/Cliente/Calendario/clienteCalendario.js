@@ -88,6 +88,9 @@ const ClienteCalendario = () => {
   };
 
   return (
+    <>
+    <br></br>
+    <br></br>
     <div className="calendar-page-background cliente">
       <div className="calendar-table-container cliente">
         <div className="calendar-container">
@@ -101,6 +104,7 @@ const ClienteCalendario = () => {
         </div>
       </div>
     </div>
+    </>    
   );
 };
 

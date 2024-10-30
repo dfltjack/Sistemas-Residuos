@@ -71,11 +71,11 @@ const NavBarMain = () => {
                       <FaMap /> &nbsp;Mapa
                     </Nav.Link>
                   </Nav.Item>
-                  <Nav.Item>
+                  {/* <Nav.Item>
                     <Nav.Link as={Link} to="/notificacoes">
                       <FaBell /> &nbsp;Notificações
                     </Nav.Link>
-                  </Nav.Item>                  
+                  </Nav.Item>                   */}
                   
                   <Nav.Item>
                     <Button variant="link" onClick={handleLogout} className="text-white">

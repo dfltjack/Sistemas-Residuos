@@ -1,6 +1,10 @@
 import React from "react";
 
-const Table = ({ dados = [], columns = [], className = "table table-stripped" }) => {
+const Table = ({
+  dados = [],
+  columns = [],
+  className = "table table-stripped",
+}) => {
   const CriarColunas = (columnType, value) => {
     switch (columnType) {
       case "texto":
@@ -10,9 +14,14 @@ const Table = ({ dados = [], columns = [], className = "table table-stripped" })
       case "time":
         return value.name;
       case "botao":
-        return value.botoes.map((item, index) => (
-          <span key={index}>{item.botao}</span>
-        ));
+        return (
+          <div style={{display: "flex", gap: "5px"}}>
+            {value.botoes.map((item, index) => (
+              <span key={index}>{item.botao} </span>
+            ))}
+            
+          </div>
+        );
       default:
         return null;
     }
@@ -20,17 +29,19 @@ const Table = ({ dados = [], columns = [], className = "table table-stripped" })
 
   return (
     <>
-      <table style={{color: "white"}} className={className} id="tabela">
-        <thead style={{color: "white"}}>
-          <tr style={{color: "white"}}>
+      <table style={{ color: "white" }} className={className} id="tabela">
+        <thead style={{ color: "white" }}>
+          <tr style={{ color: "white" }}>
             {columns.map((column) => (
-              <th style={{color: "white"}} key={column.name}>{column.name}</th>
+              <th style={{ color: "white", marginLeft: "50px" }} key={column.name}>
+                {column.name}
+              </th>
             ))}
           </tr>
         </thead>
-        <tbody style={{color: "white"}}>
+        <tbody style={{ color: "white" }}>
           {dados.map((dado, rowIndex) => (
-            <tr style={{color: "white"}} key={`linha-${rowIndex}`}>
+            <tr style={{ color: "white" }} key={`linha-${rowIndex}`}>
               {columns.map((col, colIndex) => (
                 <td key={`col-${colIndex}`}>
                   {dado[colIndex] == null

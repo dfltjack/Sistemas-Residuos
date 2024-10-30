@@ -250,6 +250,10 @@ const Mapa = () => {
   }, [listaMap]); 
 
   return (
+    <>
+    <br></br>
+    <br></br>
+    <br></br>
     <div className="containermap">
       <div className="legend">
         <h2>Como Utilizar o Mapa</h2>
@@ -285,6 +289,7 @@ const Mapa = () => {
         {/* O mapa será renderizado aqui */}
       </div>      
     </div>
+    </>    
   );
 };
 

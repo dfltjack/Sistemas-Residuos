@@ -9,7 +9,8 @@ import {
 } from "../../../../services/serviceCalendario";
 import "./calendario.css";
 import Table from "../../../commons/table/table";
-import axios from "axios";  
+import axios from "axios";
+import { styled } from "@mui/material";
 
 const AdminCalendario = () => {
   const [alterar, setAlterar] = useState(false);
@@ -21,6 +22,16 @@ const AdminCalendario = () => {
   const [coletaDays, setColetaDays] = useState([]);
   const [value, setValue] = useState(new Date());
 
+  useEffect(() => {
+    // Desativa o scroll da página
+    document.body.style.overflow = "hidden";
+
+    // Limpa o estilo ao desmontar o componente
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
+
   const columns = [
     { name: "Horario", columnType: "timeonly" },
     { name: "Dia da Semana", columnType: "texto" },
@@ -28,26 +39,23 @@ const AdminCalendario = () => {
   ];
 
   const dataSource =
-    listaCalendario &&
-    listaCalendario.map((item) => [
-      { name: item.horario },
-      { name: item.diaSemana },
-      {
-        botoes: [
-          {
-            botao: (
+  listaCalendario &&
+  listaCalendario.map((item) => [
+    { name: item.horario },
+    { name: item.diaSemana },
+    {
+      botoes: [
+        {
+          botao: (
+            <div style={{ display: "flex"}}>
               <button
                 onClick={() => CarregarCalendario(item)}
-                style={{ marginLeft: "5px" }}
                 className="btn-sm btn-primary"
                 type="button"
+                style={{ margin: "auto"}}
               >
                 Editar
               </button>
-            ),
-          },
-          {
-            botao: (
               <button
                 onClick={() => ExcluirCalendario(item.calendarioColetaId)}
                 className="btn btn-sm btn-danger"
@@ -55,10 +63,11 @@ const AdminCalendario = () => {
               >
                 Excluir
               </button>
-            ),
-          },
-        ],
-      },
+            </div>
+          ),
+        },
+      ],
+    },
   ]);
 
   const handleChange = (event, value) => {
@@ -180,13 +189,13 @@ const AdminCalendario = () => {
   };
 
   return (
-    <div className="calendar-page-background">
+    <div className="calendar-page-background-Admin">
       {" "}
       {/* Classe para o fundo da página */}
-      <div className="calendar-table-container">
+      <div className="calendar-table-container-Admin">
         {" "}
         {/* Novo contêiner flex */}
-        <div className="calendar-container">
+        <div className="calendar-container-Admin">
           <h1 style={{ textAlign: "center" }}>Calendário de Coleta</h1>
           <Calendar
             onChange={setValue}
@@ -195,7 +204,7 @@ const AdminCalendario = () => {
             tileContent={tileContent}
           />
         </div>
-         <div className="table-container">
+        <div className="table-container">
           {" "}
           {/* Tabela de cadastro */}
           <h2 style={{ textAlign: "center" }}>Cadastro de dias de Coleta</h2>
@@ -207,7 +216,7 @@ const AdminCalendario = () => {
                   readOnly={habilitar}
                   type="time"
                   id="horario"
-                 step="1"
+                  step="1"
                   value={calendario.horario || ""}
                   onChange={(e) => {
                     handleChange(e, e.target.value);
@@ -242,10 +251,10 @@ const AdminCalendario = () => {
             <button
               onClick={NovoCalendario}
               type="button"
-              style={{ marginLeft: "5px" }}
+              style={{ marginLeft: "5px", width: "9%", display: "block" }}
               className="btn-primary"
             >
-              Novo 
+              Novo
             </button>
           </div>
           <Table

@@ -56,9 +56,9 @@ const Home = () => {
               }}
             />
             <div className="card-body">
-              <h5 className="card-title">Cadastro de Residências e Estabelecimentos</h5>
+              <h5 className="card-title">Cadastro de Usuário</h5>
               <p className="card-text">
-                Adicione, edite e visualize informações das Residências e Estabelecimentos.
+                Adicione, edite e visualize informações dos Usuários.
               </p>
               <Button variant="primary" onClick={() => navigate("/cadastro")}>
                 Ir para Cadastro
@@ -116,6 +116,8 @@ const Home = () => {
         </div>
         <div className="content flex-grow-1 p-3">
           <Container>
+            <br></br>
+            <br></br>
             <h1 className="text-success">Bem-vindo ao Sistema de Gestão de Resíduos Sólidos</h1>
             <p className="text-success">
               Nosso objetivo é ajudar comunidades a gerenciar seus resíduos de forma eficiente e sustentável.
