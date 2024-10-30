@@ -213,3 +213,4 @@ C:\Users\bejac\Desktop\Sistemas Residuos\Sistema_Residuos_API\Sistema_Residuos_A
 C:\Users\bejac\Desktop\Sistemas Residuos\Sistema_Residuos_API\Sistema_Residuos_API\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\bejac\Desktop\Sistemas Residuos\Sistema_Residuos_API\Sistema_Residuos_API\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\bejac\Desktop\Sistemas Residuos\Sistema_Residuos_API\Sistema_Residuos_API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\bejac\Desktop\Sistemas Residuos\Sistema_Residuos_API\Sistema_Residuos_API\bin\Debug\net8.0\Swashbuckle.AspNetCore.Annotations.dll

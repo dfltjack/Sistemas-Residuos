@@ -1,105 +1,5 @@
 [
   {
-    "ContainingType": "Sistema_Residuos_API.Controllers.TipoResiduoController",
-    "Method": "Get",
-    "RelativePath": "api/{Controller}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Controller",
-        "Type": "",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Sistema_Residuos_API.Controllers.TipoResiduoController",
-    "Method": "Delete",
-    "RelativePath": "api/{Controller}/DeleteTipoResiduo/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "Controller",
-        "Type": "",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Sistema_Residuos_API.Controllers.TipoResiduoController",
-    "Method": "Get",
-    "RelativePath": "api/{Controller}/GetTipoResiduoById/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "Controller",
-        "Type": "",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Sistema_Residuos_API.Controllers.TipoResiduoController",
-    "Method": "Post",
-    "RelativePath": "api/{Controller}/PostTipoResiduo",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "tipoResiduoVM",
-        "Type": "Sistema_Residuos_MODEL.ViewModel.TipoResiduoVM",
-        "IsRequired": true
-      },
-      {
-        "Name": "Controller",
-        "Type": "",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Sistema_Residuos_API.Controllers.TipoResiduoController",
-    "Method": "Put",
-    "RelativePath": "api/{Controller}/PutTipoResiduo",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "tipoResiduoVM",
-        "Type": "Sistema_Residuos_MODEL.ViewModel.TipoResiduoVM",
-        "IsRequired": true
-      },
-      {
-        "Name": "Controller",
-        "Type": "",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "Sistema_Residuos_API.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",
@@ -507,6 +407,100 @@
         "Name": "tipoEstabelecimentoVM",
         "Type": "Sistema_Residuos_MODEL.ViewModel.TipoEstabelecimentoVM",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.TipoResiduoController",
+    "Method": "Get",
+    "RelativePath": "api/TipoResiduo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.TipoResiduoController",
+    "Method": "Delete",
+    "RelativePath": "api/TipoResiduo/DeleteTipoResiduo/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.TipoResiduoController",
+    "Method": "Get",
+    "RelativePath": "api/TipoResiduo/GetTipoResiduoById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.TipoResiduoController",
+    "Method": "Post",
+    "RelativePath": "api/TipoResiduo/PostTipoResiduo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TipoResiduoId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Res\u00EDduo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FotoResiduo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sistema_Residuos_API.Controllers.TipoResiduoController",
+    "Method": "Put",
+    "RelativePath": "api/TipoResiduo/PutTipoResiduo",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TipoResiduoId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Res\u00EDduo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FotoResiduo",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

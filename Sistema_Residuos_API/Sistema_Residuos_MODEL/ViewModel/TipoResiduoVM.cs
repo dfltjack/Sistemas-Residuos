@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 using Sistema_Residuos_MODEL.Models;
 using System;
 using System.Collections.Generic;
@@ -15,33 +16,34 @@ namespace Sistema_Residuos_MODEL.ViewModel
         [Display(Name = "Código do Tipo de Resíduo")]
         public int TipoResiduoId { get; set; }
 
-        [Display(Name = "Calendário de Coleta")]
-        public virtual ICollection<CalendarioColetum> CalendarioColeta { get; set; } = new List<CalendarioColetum>();
+        [Display(Name = "Resíduos")]
+        public string Resíduo { get; set; }
 
-        [Display(Name = "Pontos de Coleta")]
-        public virtual ICollection<PontosColetum> PontosColeta { get; set; } = new List<PontosColetum>();
+        [Display(Name = "Foto")]
+        public string FotoResiduo { get; set; } // Alterado para string, para armazenar URL
 
-        public TipoResiduoVM()
-        {
+        // [Display(Name = "Calendário de Coleta")]
+        // public virtual ICollection<CalendarioColetum> CalendarioColeta { get; set; } = new List<CalendarioColetum>();
 
-        }
+        // [Display(Name = "Pontos de Coleta")]
+        // public virtual ICollection<PontosColetum> PontosColeta { get; set; } = new List<PontosColetum();
+
+        public TipoResiduoVM() { }
 
         public async static Task<List<TipoResiduoVM>> GetTipoResiduoVMsAsync()
         {
-
-            List<TipoResiduoVM> tipoResiduoVMs = new List<TipoResiduoVM>();
-
-            var db = new Sistema_ResiduosContext();
-            return await (from tip in db.TiposResiduos
-                          select new TipoResiduoVM
-                          {
-                              TipoResiduoId = tip.TipoResiduoId,
-                              CalendarioColeta = tip.CalendarioColeta,
-                              PontosColeta = tip.PontosColeta
-
-                          }).ToListAsync();
-
+            using (var db = new Sistema_ResiduosContext())
+            {
+                return await (from tip in db.TiposResiduos
+                              select new TipoResiduoVM
+                              {
+                                  TipoResiduoId = tip.TipoResiduoId,
+                                  Resíduo = tip.Resíduo,
+                                  FotoResiduo = tip.FotoResiduo, // Agora é uma URL
+                                  // CalendarioColeta = tip.CalendarioColeta,
+                                  // PontosColeta = tip.PontosColeta
+                              }).ToListAsync();
+            }
         }
-       
     }
 }

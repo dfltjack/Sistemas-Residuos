@@ -19,11 +19,12 @@ builder.Services.AddControllers();
 
 // Configure the services
 builder.Services.AddScoped<RepositoryCalendario>();
+builder.Services.AddScoped<RepositoryTipoResiduo>();
 builder.Services.AddScoped<ServiceCalendario>();
 builder.Services.AddScoped<ServiceNotificacao>();
 builder.Services.AddScoped<UserService>();
-builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<ServicePontosColeta>();
+builder.Services.AddScoped<ServiceTipoResiduo>();
 builder.Services.AddScoped<TokenService>(provider =>
 {
     var context = provider.GetRequiredService<Sistema_ResiduosContext>();
@@ -98,6 +99,7 @@ builder.Services.AddSwaggerGen(options =>
         Type = "string",
         Format = "Time"
     });
+    options.OperationFilter<SwaggerFileUploadOperation>();
 });
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

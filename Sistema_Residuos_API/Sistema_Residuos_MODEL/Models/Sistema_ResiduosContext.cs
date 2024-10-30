@@ -34,7 +34,7 @@ public partial class Sistema_ResiduosContext : DbContext
     public virtual DbSet<Usuario> Usuarios { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Data Source=jacknotebook\\sqlexpress;Initial Catalog=Sistema_Residuos;Integrated Security=True;Encrypt=True;trustservercertificate=true");
+        => optionsBuilder.UseSqlServer("Data Source=jacknotebook\\sqlexpress;Initial Catalog=Sistema_Residuos;Integrated Security=True;Encrypt=True;trustservercertificate=true;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -90,6 +90,7 @@ public partial class Sistema_ResiduosContext : DbContext
 
             entity.HasOne(d => d.TipoResiduo).WithMany(p => p.PontosColeta)
                 .HasForeignKey(d => d.TipoResiduoId)
+                .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("FK__PontosCol__TipoR__45F365D3");
         });
 
@@ -131,6 +132,9 @@ public partial class Sistema_ResiduosContext : DbContext
 
             entity.HasIndex(e => e.TipoResiduoId, "UQ__TiposRes__C9AE645581A4E1EB").IsUnique();
 
+            entity.Property(e => e.FotoResiduo)
+                .HasColumnType("image")
+                .HasColumnName("fotoResiduo");
             entity.Property(e => e.Resíduo)
                 .HasMaxLength(50)
                 .IsUnicode(false);

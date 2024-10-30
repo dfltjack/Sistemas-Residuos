@@ -7,7 +7,8 @@ import Login from '../../pages/Login/login';
 import Mapa from '../../pages/MapaPath/mapa';
 import Calendario from '../../pages/CalendarioPath/calendario';
 import Notificacoes from '../../pages/Notificacoes/notificacoes';
-import { FaSignInAlt, FaUserPlus, FaBell, FaSignOutAlt, FaCalendar, FaMap } from 'react-icons/fa';
+import TipoResiduos from '../../pages/TipoResiduos/TipoResiduos';
+import { FaSignInAlt, FaUserPlus, FaSignOutAlt, FaCalendar, FaMap, FaBacteria } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse } from '@fortawesome/free-solid-svg-icons';
 import './navbar.css';
@@ -71,6 +72,11 @@ const NavBarMain = () => {
                       <FaMap /> &nbsp;Mapa
                     </Nav.Link>
                   </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link as={Link} to="/tipoResiduo">
+                      <FaBacteria /> &nbsp;Tipos de Residuos
+                    </Nav.Link>
+                  </Nav.Item>
                   {/* <Nav.Item>
                     <Nav.Link as={Link} to="/notificacoes">
                       <FaBell /> &nbsp;Notificações
@@ -98,6 +104,7 @@ const NavBarMain = () => {
           <Route path="/home" element={<Home />} />
           <Route path="/mapa" element={<Mapa />} />
           <Route path="/calendario" element={<Calendario />} />
+          <Route path="/tipoResiduo" element={<TipoResiduos />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Container>
