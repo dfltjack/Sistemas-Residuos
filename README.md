@@ -9,6 +9,15 @@
 ## Cadastro
 <img src="https://github.com/user-attachments/assets/f034c3c0-139d-410e-ad5f-f5aedabc4cd7" style="width: 600px"><img/>
 
+## Calendário
+<img src="https://github.com/user-attachments/assets/7b336a30-4265-4684-a7ea-73cbaf142c2c" style="width: 600px"><img/>
+
+## Mapa
+<img src="https://github.com/user-attachments/assets/cef8c10a-edc0-4c40-8156-f5c3b86999777" style="width: 600px"><img/>
+
+## Tipos de Resíduos
+<img src="https://github.com/user-attachments/assets/4e3421b7-dc01-440a-bb2c-7eb79cdd0dde" style="width: 600px"><img/>
+
 ## Empresas Parceiras
 
 Empresas e organizações que podem atuar como parceiras no processo de gestão de resíduos:
