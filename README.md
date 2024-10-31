@@ -1,13 +1,22 @@
 # Gestão de Resíduos Sólidos: Empresas Parceiras e Oportunidades de Negócio
 
 ## Home
-<img src="https://github.com/user-attachments/assets/0a1c7fd0-a09c-408c-bb83-79b24d11d272"><img/>
+<img src="https://github.com/user-attachments/assets/dcde8ef1-9232-4631-9cfd-5bd02028dbf4" style="width: 600px"><img/>
 
 ## Login
-<img src="https://github.com/user-attachments/assets/2e5df378-ab96-463b-8769-3370028e402b"><img/>
+<img src="https://github.com/user-attachments/assets/2e5df378-ab96-463b-8769-3370028e402b" style="width: 600px"><img/>
 
 ## Cadastro
-<img src="https://github.com/user-attachments/assets/f034c3c0-139d-410e-ad5f-f5aedabc4cd7"><img/>
+<img src="https://github.com/user-attachments/assets/f034c3c0-139d-410e-ad5f-f5aedabc4cd7" style="width: 600px"><img/>
+
+## Calendário
+<img src="https://github.com/user-attachments/assets/7b336a30-4265-4684-a7ea-73cbaf142c2c" style="width: 600px"><img/>
+
+## Mapa
+<img src="https://github.com/user-attachments/assets/cef8c10a-edc0-4c40-8156-f5c3b86999777" style="width: 600px"><img/>
+
+## Tipos de Resíduos
+<img src="https://github.com/user-attachments/assets/4e3421b7-dc01-440a-bb2c-7eb79cdd0dde" style="width: 600px"><img/>
 
 ## Empresas Parceiras
 
