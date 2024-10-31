@@ -16,11 +16,12 @@
   width: 326px;
   height: 98vh;
   position: fixed;
-  top: 0;
+  top: -8px;
   left: 0;
-  overflow-y: hidden;
+  overflow-y: auto;
   margin-top: 56px;
   padding-top: 0px;
+  max-height: -webkit-fill-available;
 }
 
 .text-success {
@@ -130,7 +131,14 @@
     background-color: #0d6efd;
     border-color: #0d6efd;
     display: flex;
-    margin-left: 70px;
+    margin-left: 53px;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    margin-left: 32px;
 }
 
 .button:hover {

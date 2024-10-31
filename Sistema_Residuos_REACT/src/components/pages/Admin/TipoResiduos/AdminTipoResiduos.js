@@ -5,7 +5,7 @@ import {
   PostTipoResiduo,
   PutTipoResiduo,
   DeleteTipoResiduo,
-} from "../../../services/serviceTipoResiduo";
+} from "../../../../services/serviceTipoResiduo";
 import "./tipoResiduos.css";
 
 const TipoResiduos = () => {
@@ -86,6 +86,7 @@ const TipoResiduos = () => {
 
   return (
     <Container>
+        <br></br>
         <br></br>
       <h1 style={{color: "black", textAlign: "center"}}>Tipos de Resíduos</h1>
       <Button variant="success" onClick={() => handleShowModal()}>

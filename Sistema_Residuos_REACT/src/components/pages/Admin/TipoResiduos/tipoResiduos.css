@@ -9,6 +9,6 @@
 
 .table>tbody {
   vertical-align: inherit;
-  background-color: grey;
-  font-size: 2vh;
+  background-color: "";
+  font-size: 17px;
 }
