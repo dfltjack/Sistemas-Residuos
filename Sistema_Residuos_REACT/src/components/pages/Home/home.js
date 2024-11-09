@@ -8,10 +8,26 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import "./home.css";
+import { GetTipoResiduo } from "../../../services/serviceTipoResiduo";
 
 const Home = () => {
   const navigate = useNavigate();
   const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [tiposResiduos, setTiposResiduos] = useState([]);
+
+  useEffect(() => {
+    fetchTiposResiduos();
+  }, []);
+
+  const fetchTiposResiduos = async () => {
+    try {
+      const response = await GetTipoResiduo();
+      console.log("Dados recebidos:", response.data);
+      setTiposResiduos(response.data);
+    } catch (error) {
+      console.error("Erro ao buscar tipos de resíduos:", error);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -149,7 +165,50 @@ const Home = () => {
           </div>
         </div>
       </div>
-
+      <div
+        id="carouselResiduos"
+        className="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div className="carousel-inner">
+          {tiposResiduos.map((residuo, index) => (
+            <div
+              className={`carousel-item ${index === 0 ? "active" : ""}`}
+              key={residuo.tipoResiduoId}
+            >
+              <img
+                src={residuo.fotoResiduo}
+                className="d-block w-100"
+                alt={`Imagem de ${residuo.resíduo}`}
+              />
+            </div>
+          ))}
+        </div>
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselResiduos"
+          data-bs-slide="prev"
+        >
+          <span
+            className="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselResiduos"
+          data-bs-slide="next"
+        >
+          <span
+            className="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div>
       <div className="content flex-grow-1 p-3">
         <Container>
           <br></br>

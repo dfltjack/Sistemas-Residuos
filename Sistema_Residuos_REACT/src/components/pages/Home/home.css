@@ -146,3 +146,55 @@
     transform: scale(1.05); /* Aumenta ligeiramente no hover */
     color: #ffffff;
 }
+
+.carousel {
+    margin-top: 20px;
+}
+  
+.carousel-inner {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 154px;
+}
+  
+.carousel-item img {
+    height: 226px;
+    object-fit: cover;
+    margin-left: 10px;
+    margin-top: 29px;
+}
+
+.carousel-control-prev-icon{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+    margin-right: 263px;
+}
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 340px;
+}
+  
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+  
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    margin-left: 274px;
+}
+.carousel-indicators {
+    bottom: -30px;
+}
+  
+.carousel-indicators li {
+   background-color: rgba(0, 0, 0, 0.5);
+}
+  
+.carousel-indicators .active {
+    background-color: rgba(0, 0, 0, 0.8);
+}

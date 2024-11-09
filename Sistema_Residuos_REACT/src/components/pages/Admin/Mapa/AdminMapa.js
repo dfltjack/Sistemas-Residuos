@@ -190,7 +190,7 @@ const Mapa = () => {
 
     // Load the Google Maps API script
     const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?&libraries=places`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=&libraries=places`;
     script.async = true;
     script.defer = true;
     document.head.appendChild(script);
