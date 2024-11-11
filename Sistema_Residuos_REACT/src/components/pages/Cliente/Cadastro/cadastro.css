@@ -1,0 +1,59 @@
+/* styles.css */
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px;  
+  border-radius: 8px; 
+}
+
+.TextField {
+  margin-bottom: 15px;
+}
+
+.TextField label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.TextField input,
+.TextField select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.TextField input:focus,
+.TextField select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

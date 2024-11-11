@@ -6,21 +6,21 @@ export async function login(email, password) {
         const response = await Api.post('/Auth/login', { email, password });
         return response.data; // Retorna os dados da resposta, que incluem o token e o nome do usuário
     } catch (error) {
-        throw error; // Lança o erro para ser tratado onde a função for chamada
+        throw error; 
     }
 }
 
 // Função para criar um novo usuário
-export async function register(name, email, password) {
+export async function register(name, email, password, role) {
     try {
         const response = await Api.post('/User', {
             nome: name,
             email,
             senha: password,
-            role: 'cliente' // ou qualquer valor padrão que você deseje
+            role: role, 
         });
-        return response.data; // Retorna os dados da resposta, se necessário
+        return response.data; 
     } catch (error) {
-        throw error; // Lança o erro para ser tratado onde a função for chamada
+        throw error; 
     }
 }
