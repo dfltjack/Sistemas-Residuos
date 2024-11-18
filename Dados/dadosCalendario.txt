@@ -1,0 +1,4 @@
+'CalendarioColetaId';'TipoResiduoId';'Horario';'DiaSemana'
+'1';'';'17:20:30.0000000';'Segunda-feira'
+'10';'';'15:15:30.0000000';'Terça-feira'
+'11';'';'10:10:00.0000000';'Quarta-feira'
