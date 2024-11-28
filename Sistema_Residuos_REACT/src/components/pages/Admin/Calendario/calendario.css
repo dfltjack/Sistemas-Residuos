@@ -1,0 +1,152 @@
+/* Estilização para o fundo da página apenas no calendário */
+.calendar-page-background-Admin {
+    background-image: url("/public/assets/background.1.jpg");
+    background-color: lightgray;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200%;
+    margin-left: -600px;
+    margin-right: 0px;
+    overflow: hidden;
+}
+
+/* Contêiner para alinhar o calendário e a tabela */
+.calendar-table-container-Admin {
+    display: flex;
+    justify-content: space-between;
+    width: 118%;
+    max-width: 1438px;
+    margin-top: 20px;
+}
+
+/* Estilos específicos do calendário */
+.calendar-container-Admin {
+    width: 65%;
+    max-width: 800px;
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+}
+
+.react-calendar {
+    width: 100%;
+    font-size: 1.1em;
+    background-color: #e5f7e9;
+    /* Fundo claro que remete à natureza */
+    border-radius: 10px;
+    border: 1px solid #388e3c;
+}
+
+/* Estilização dos dias no calendário */
+.react-calendar__tile {
+    height: 90px;
+    color: #2e7d32;
+    /* Cor verde escura */
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    border: 1px solid #4caf50;
+}
+
+.react-calendar__tile:hover {
+    background-color: #81c784;
+    /* Cor verde clara no hover */
+    border-color: #66bb6a;
+}
+
+/* Borda verde para o dia atual e dias de coleta */
+.react-calendar__tile--now {
+    background-color: #aed581;
+    /* Verde suave para o dia atual */
+}
+
+.coleta-date {
+    background-color: #66bb6a;
+    /* Verde para os dias de coleta */
+}
+
+/* Estilo do conteúdo nos dias */
+.tile-content {
+    font-size: 0.9em;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Estilos da tabela de cadastro */
+.table-container {
+    width: 58%;
+    /* Define a largura da tabela */
+    background-color: #8bc34a;
+    /* Fundo verde mais claro */
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilização dos botões */
+.button1 {
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: #388e3c;
+    /* Verde escuro */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    width: 20%;
+}
+
+.button:hover {
+    background-color: #66bb6a;
+    /* Verde claro no hover */
+    transform: scale(1.05);
+    color: #ffffff;
+}
+
+/* Estilos para os dias da semana */
+.segunda-feira,
+.terça-feira,
+.quarta-feira,
+.quinta-feira,
+.sexta-feira,
+.sabado,
+.domingo {
+    background-color: #c8e6c9;
+    /* Verde suave para os dias da semana */
+    border-radius: 5px;
+    color: #2e7d32;
+    padding: 10px;
+}
+
+.coleta-content {
+    font-size: 0.8em;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #388e3c;
+    /* Verde escuro para o conteúdo da coleta */
+    border-radius: 5px;
+    padding: 2px;
+    text-align: center;
+}
+
+/* Estilização da tabela */
+.th {
+    color: white;
+    max-width: 90vh;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-weight: bold;
+    background-color: #4caf50;
+    /* Verde escuro */
+}

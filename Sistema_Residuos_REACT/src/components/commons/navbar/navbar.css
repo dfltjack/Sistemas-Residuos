@@ -1,0 +1,42 @@
+.navbar {
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.6rem;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  margin-top: -24px;
+}
+
+/* Alinha o título à esquerda */
+.navbar-left {
+  margin-right: auto;
+}
+
+/* Alinha os itens da navbar à direita */
+.navbar-nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Ajusta o espaço entre os itens da navbar */
+.nav-item {
+  margin-right: 15px;
+}
+
+/* Ajusta o texto de boas-vindas */
+/* Ajusta o alinhamento da mensagem de boas-vindas */
+.navbar-text {
+  margin-bottom: -6px; /* Remove qualquer margem inferior */
+  padding-top: 3px; /* Ajusta o padding superior para alinhamento */
+  font-size: 16px; /* Mantém o tamanho da fonte consistente */
+  line-height: 1.5; /* Ajusta a altura da linha para centralização */
+}
+/* Botão de logout estilizado */
+.btn-link {
+  color: #f8f9fa;
+  text-decoration: none;
+}

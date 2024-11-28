@@ -1,0 +1,210 @@
+.text {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: justify;
+    margin-left: 7%;
+    margin-right: -36%
+}
+
+.navbar.scrolled {
+    background: #000000; /* Cor mais escura ao rolar */
+    padding: 8px 18px; /* Padding ainda menor ao rolar */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar {
+  width: 326px;
+  height: 98vh;
+  position: fixed;
+  top: -8px;
+  left: 0;
+  overflow-y: auto;
+  margin-top: 56px;
+  padding-top: 0px;
+  max-height: -webkit-fill-available;
+}
+
+.text-success {
+    color: #000!important;
+    margin-right: 4%;
+    margin-left: 7%;
+    font-weight: bolder;
+}
+
+.content {
+  margin-left: 300px;
+  padding: 20px;
+}
+
+.card-header {
+  font-weight: bold;
+}
+
+.card-img-top{   
+    display: flex;
+    align-self: center;
+    width: 30%;
+}
+
+.card-title{
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+}
+
+.card-text{
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    margin-left: 0%;
+    margin-right: 0%
+}
+
+/* Estilização para o footer */
+.footer-container {
+    position: relative; /* Alterado para posição relativa para não fixar no topo da página */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2C6B2F; /* Cor mais relacionada à sustentabilidade */
+    padding: 0px 0px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    opacity: 1; /* Corrigido de 10 para 1, garantindo que fique totalmente visível */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-container {
+    position: fixed; /* Faz com que o footer vá para o final da página */
+    margin-top: auto; /* Faz o footer ficar na parte inferior */
+    margin-left: 326px;
+    margin-right: 100%;
+}
+
+/* Ajustes de texto dentro do footer */
+.footer-container h5, .footer-container ul {
+    color: #ffffff;
+    font-size: 14px; /* Tamanho um pouco maior para melhor leitura */
+    margin: 0; /* Removido espaçamento externo desnecessário */
+}
+
+/* Copyright */
+.copyright {
+    text-align: left;
+    color: #bbbbbb;
+    font-size: 12px;
+    margin-left: 0%;
+}
+
+/* Links no footer */
+.footer-container a {
+    color: linear-gradient(90deg, rgba(19, 216, 12, 0.582), rgba(3, 163, 38, 0.836));;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-container a:hover {
+    color: linear-gradient(90deg, rgba(19, 216, 12, 0.582), rgba(3, 163, 38, 0.836)); /* Cor de destaque no hover para manter a harmonia */
+    text-decoration: underline;
+}
+
+.footer-container h5, .footer-container ul {
+    color: #ffffff;
+    font-size: 12px; /* Tamanho mais ajustado */
+}
+
+.footer-container a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-container a:hover {
+    color: #ccccff;
+    text-decoration: underline;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    display: flex;
+    margin-left: 53px;
+    width: auto;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    display: flex;
+    margin-left: 53px;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    margin-left: 32px;
+    width: auto;
+}
+
+.button:hover {
+    background-color: #00b318d7;
+    transform: scale(1.05); /* Aumenta ligeiramente no hover */
+    color: #ffffff;
+}
+
+.carousel {
+    margin-top: 20px;
+}
+  
+.carousel-inner {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 154px;
+}
+  
+.carousel-item img {
+    height: 226px;
+    object-fit: cover;
+    margin-left: 10px;
+    margin-top: 29px;
+}
+
+.carousel-control-prev-icon{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+    margin-right: 263px;
+}
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 340px;
+}
+  
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+  
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    margin-left: 274px;
+}
+.carousel-indicators {
+    bottom: -30px;
+}
+  
+.carousel-indicators li {
+   background-color: rgba(0, 0, 0, 0.5);
+}
+  
+.carousel-indicators .active {
+    background-color: rgba(0, 0, 0, 0.8);
+}

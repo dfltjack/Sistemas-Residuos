@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2? family= Noto+Sans:wght@400;600 & display=swap');
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.mainlogin {
+    width: 110vw;
+    height: 99vh;
+    background-color: #3e1e46;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -50vh;
+    margin-top: -40px
+}
+
+.leftlogin{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.leftlogin > h1 {
+    color: #77ffc0;
+    font-size: 3vw;
+}
+
+.imagem{
+    width: 35vw;
+}
+
+
+.rigthlogin{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardlogin{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #502c5e;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.cardlogin > h1{
+    color: #00ff88;
+    font-weight: 800;
+    margin: 0;
+}
+
+.TextField{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.TextField > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #604869;
+    color: #f0ffffde;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.TextField > label {
+    color: #f0ffffde;
+    margin-bottom: 10px;
+} 
+
+.TextField > input::placeholder{
+    color: #f0ffff94;
+}
+
+.btn-login{
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px
+}
+
+.btn-login{
+    color: #3d134b;
+    background: #00ff88;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8053 ;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+} 

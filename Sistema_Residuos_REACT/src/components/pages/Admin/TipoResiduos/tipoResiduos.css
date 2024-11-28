@@ -1,0 +1,14 @@
+.container {
+    margin-top: 20px;
+}
+  
+.table img {
+    display: block;
+    margin: 0 auto;
+}
+
+.table>tbody {
+  vertical-align: inherit;
+  background-color: "";
+  font-size: 17px;
+}
