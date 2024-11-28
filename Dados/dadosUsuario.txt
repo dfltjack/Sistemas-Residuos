@@ -1,0 +1,6 @@
+'UsuarioId';'Nome';'Email';'Senha';'Role'
+'7';'Jackson';'bejack15@gmail.com';'AQAAAAIAAYagAAAAED4Ua/BacXlhnWJVt8aIzrxQGi8Sz7zHu3lEq7TIiEceV8y0YHaOB6RdSto+HzzIeA==';'admin'
+'9';'Teste';'teste@teste.com';'AQAAAAIAAYagAAAAELJWt8OHGrrfZYALoGls3PKSz8+C/gSABQuokwo5ot/EtO6NfNsewzKD5MD4q6TsGg==';'cliente'
+'11';'amanda123';'amandal@gmail.com';'AQAAAAIAAYagAAAAEO72fsZDRg1z45j/Fx2S2jmctMj/7Sj/1s1mZT2sIvh2M+I7xfe9khefakB3bj7M2g==';'cliente'
+'26';'Admin';'admin@admin.com';'AQAAAAIAAYagAAAAEG5B/rytf9lYolGGnZTABZfilb1TCWF2N+nl+iS3Z7xhhHBSW+zWWEPUQI8FVVwjDg==';'admin'
+'30';'eu mermo';'bejack16@gmail.com';'AQAAAAIAAYagAAAAEIt3MAixcfIusBfHeLT+FfyJr4C38q+oVItaLS3bCUBcok/KNjx4OPgFLwrD2NECtg==';'cliente'
